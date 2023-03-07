@@ -1,0 +1,387 @@
+@media screen and (min-width:1200px){
+    #icon-menu{
+        display: none;
+    }
+          
+}
+
+@media screen and (max-width:1199px) and (min-width:46.185em){
+    .menu-breakfast  {
+        width: 100%;
+        margin: 0;
+        margin-left:auto;
+        margin-right:auto;
+    }
+    .menu-breakfast__1  {
+        position: relative;
+        width: 47%;
+        margin-bottom: 20px;
+
+    }
+    
+    .menu-breakfast__icon h6 {
+        font-size: 1.4rem;
+    }
+
+    .sell-and-check span {
+        font-size: 1.6rem;
+    }
+
+    .link-cart a {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+
+    .item-action{
+        font-size: 1.2rem;
+    }
+}
+    
+@media (max-width:46.185em){
+  .wrapper{
+    z-index: 2;
+  }
+
+    .logo{
+        display: none;
+    }
+    .navbar{
+        position: relative;
+    }
+    .box-icon{
+        position: absolute;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+}
+
+    .navbar-menu {
+        display: none;
+    }
+
+    .navbar-menu .dd_menu ul li a{
+
+        background-color: var(--primary-color);
+    
+    }
+    
+    
+    
+    .navbar-menu > ul {
+        display: inline-block;
+        top: 50px;
+        position: absolute;
+        width: 100%;
+    }
+    .navbar-menu ul li {
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .navbar-menu ul li > a {
+        width: 100%;
+    }
+    .navbar-menu .dd_menu {
+        position: relative;
+        top: 0px;
+        left: 0;
+        display: none;
+    }
+    .navbar-menu .dd_menu ul li a{
+        width: 100%;
+        
+    }
+    .navbar-menu ul li a{
+        font-size: 18px;
+    }
+    
+    /* menu */
+    #icon-all{
+        display: none;
+    }
+    .icon-information > ul {
+        padding-left: 396px;
+        background: #c2ecdae0;
+    }
+    .icon-information ul li:last-child > a {
+        margin-right: 5px;
+    }
+   
+
+
+    /* slider */
+    .slider {
+        display: flex;
+        flex-direction: column;
+        height: 660px;
+        margin: 0;
+        padding: 0;
+
+    }
+
+    .slider__shop {
+        font-size: 1.2rem;
+    }
+
+    .slider__pencel {
+        display: none;
+        
+    }
+
+    .slider__view{
+        display: none;
+    }
+
+    .slider__shop {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .slider__img img {
+      
+        margin: 0px 35px;
+    }
+    .slider__pen {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    /* content */
+  
+    .comment-two {
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+    }
+
+    .logo-img {
+        /* background-color: #fff; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .logo-comment h2 {
+        
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .logo-comment p {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .logo-salads {
+        display: block;
+        background-color: #f8f8f8;
+        padding: 20px 10px;
+        margin-top: 0;
+        
+
+    }
+    .comment-one {
+        width: 100%;
+        display: flex;
+        padding: 20px;
+    }
+      
+    .comment-one {
+        width: 100%;
+        display: flex;
+        padding: 20px;
+    }
+
+    .contract-all{
+        padding: 50px 10px;
+    }
+
+    .contract-food{
+        display: block;
+      }
+
+    .food-up {
+        position: relative;
+        width: 100%;
+        height: 210px;
+        margin-left: 0px;
+        margin-bottom: 15%;
+        
+    }
+
+    /* menu breakfast */
+    #list-tooltip {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .tab-item {
+        width: 100%;
+    }
+
+    .menu-breakfast  {
+        width: 100%;
+        margin: 0;
+        margin-left:auto;
+        margin-right:auto;
+    }
+    .menu-breakfast__1  {
+        position: relative;
+        width: 95%;
+        margin-bottom: 20px;
+
+    } 
+
+    .snack {
+        height: 400px;
+    }
+
+    #list-tooltip li button {
+        font-size: 1.4rem;
+    }
+
+    .child-box {
+        left: 10px;
+    }
+
+    .box-content {
+        width: 80%;
+        display: inline-flex;
+        flex-direction: column;
+        height: 80vh;
+        overflow: auto;
+    }
+
+    .box-left {
+        height: 80%;
+        overflow: hidden;
+    }
+
+    .box-right {
+        height: 100%;
+    }
+    #but-amount {
+        margin: 0;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .plus-minus {
+        display: flex;
+    }
+
+    
+    #but-amount .link-cart a {
+        margin: 0;
+        font-size: 1.2rem;
+        font-weight: 100;
+    }
+
+    .child-box p {
+        font-size: 1.6rem;
+    }
+    
+    .child-box a {
+        font-size: 1.6rem;
+    }
+
+    .child-box a span {
+        font-size: 1.6rem;
+        font-weight: 100;
+    }
+
+    .add-info li a i {
+        font-size: 1.8rem;
+    }
+    
+
+
+    /* footer */
+    .footer-all {
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 150%;
+        margin-top: 40px;
+        background-color: var(--green--color);
+    }
+
+    .row{
+        display: block;
+        padding: 20px 5px 0px 5px;
+
+    }
+
+    .col-3 {
+      
+        margin-left: 10px;
+    }
+
+    .footer-comment {
+        margin-top: 20px;
+        width: 250px;
+    }
+
+    .footer-icon {
+     
+        display: flex;
+}   
+
+    .footer-icon i {
+        margin-right: 10px;
+    }   
+
+    .footer-link {
+        width: 130px;
+    }
+
+    .footer-content p {
+        margin-top: 50px;
+        width: 120px;
+    }
+
+    .footer-house {
+        width: 350px;
+        font-size: 13px;
+    }
+    .footer-mail a {
+        display: flex;
+    }
+
+    .footer-mail i{
+        padding-top: 5px;
+    }
+
+    .footer-phone a {
+        display: flex;
+    }
+
+    .footer-phone i{
+        padding-top: 5px;
+    }
+
+        
+    .footer-end {
+        margin-top: 50px;
+    }
+
+    .comment::before {
+        content: "";
+        width: 100%;
+        height: 1px;
+        background-color: #ccc;
+        position: absolute;
+        top: 935px;
+    }
+}
+
+
+
+

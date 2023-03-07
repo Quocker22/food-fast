@@ -1,0 +1,311 @@
+* {
+    margin: 0;
+    box-sizing: inherit;
+    padding: 0;
+}
+
+
+
+.header__img{
+    background: url(../../../../access/img/bg-auth.png) ;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: -80%;
+}
+
+
+
+.footer__contract{
+    /* max-width: 500px; */
+    position: absolute;
+    left: 8%;
+    top: 1%;
+    bottom: 1%;
+    width: 67%;
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+}
+.footer__food{
+    /* max-width: 500px; */
+    width: 100%;
+    padding: 18px 0;
+    
+}
+/* Logo */
+.logo__food{
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+   font-weight: 800;
+}
+.logo__food a{
+    color: #000;
+    text-decoration: none;
+}
+
+.sign__food{
+    display: flex;
+    justify-content: center;
+    line-height: 30px;
+    color: var(--gold-color);
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+/* emai */
+.commemt__emai{
+    float: left;
+    padding: 20px 0px 0px;
+    width: 100%;
+    min-width: 100px;
+}
+.commemt__emai .email__from{
+    float: left;
+    width: 100%;
+    font-size: 0.8rem;
+    padding: 12px
+    
+}
+
+.emai__login{
+    display: flex;
+}
+
+.email__from{
+    font-size: 15px;
+    outline: none;
+    color: #535353;
+    border-radius: 0 3px 3px 0;
+    border: 1px solid #dbdbdb;
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 6%);
+}
+
+.emai__login i{
+    left: 0;
+    width: 50px;
+    height: 43px;
+    line-height: 45px;
+    margin-left: 0px;
+    text-align: center;
+    background: #fab55d;
+    color: #fff;
+    border-radius: 3px 0 0 3px;
+    font-size: 1rem;
+}
+/* password */
+
+ .login__pass{
+    display: flex;
+ }
+.commemt__password{
+    float: left;
+    padding: 20px 0 0;
+    width: 100%;
+    min-width: 100px;
+}
+
+.commemt__password .password__from{
+    float: left;
+    font-size: 0.8rem;
+    width: 100%;
+    padding: 12px;
+}
+.password__from{
+    font-size: 15px;
+    outline: none;
+    color: #535353;
+    border-radius: 0 3px 3px 0;
+    border: 1px solid #dbdbdb;
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 6%);
+}
+.login__pass i{
+    width: 50px;
+    left: 0;
+    height: 44px;
+    line-height: 45px;
+    margin-left: 0px;
+    text-align: center;
+    background: #fab55d;
+    color: #fff;
+    border-radius: 3px 0 0 3px ;
+    font-size: 1rem;
+}
+
+/* remember and forgot */
+.remember__to-food{
+    float: left;
+    display: flex;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    margin-top: 23px;
+}
+
+
+
+.remember__check-kout{
+    margin-left: 5px;
+}
+
+.forgot__to-word{
+    text-decoration: none;
+    color: var(--gold-color);
+
+}
+
+
+/* nút login */
+
+
+.login-btn{
+    width: 100%;
+    margin-top: 20px;
+    background: var(--gold-color);
+    color: #fff;
+    height: 7%;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+/* or login width */
+
+.or__will{
+    position: relative;
+    display: flex;
+    background: #fff;
+    justify-content: center;
+    width: 40%;
+    margin-left: 91px;
+    margin-top: 27px;
+}
+.or__will p{
+    background: #fff;
+    z-index: 1;
+    width: 70%;
+    margin-left: 26px;
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: center;
+}
+
+.or__will::before {
+    content: "";
+    position: absolute;
+    top: 52%;
+    left: -60%;
+    width: 245%;
+    right: 0;
+    height: 1px;
+    background: #23396726;
+}
+
+/* Facebook and Twitter Google*/
+.facebook__t_gg{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    width: 94%;
+    font-size: 0.8rem;
+}
+.facebook__t_gg a{
+    text-decoration: none;
+}
+.facebook__btn-icon{
+    background: var(--facebook-color);
+    border-radius: 5px;
+    padding: 5px 14px 5px 14px;
+}
+
+.facebook-icon{
+   color: #fff;
+}
+
+.facebook__btn{
+    color: #fff
+}
+
+.twitter__btn-icon{
+    background: var(--twitter-color);
+    border-radius: 5px;
+    padding: 5px 14px 5px 14px;
+}
+
+.twitter-icon{
+    color: #fff;
+}
+
+.Twitter__btn{
+    color: #fff;
+}
+
+.google__btn-icon{
+    background: var(--google-color);
+    border-radius: 5px;
+    padding: 5px 14px 5px 14px;
+}
+
+.google-icon{
+    color: #fff;
+}
+
+.google__btn{
+    color: #fff;
+}
+
+/* register */
+.link__register{
+    display: flex;
+    justify-content: center;
+    margin-top: 35px;
+    font-size: 0.8rem;
+}
+
+.link__register a{
+    text-decoration: none;
+    padding-left: 5px;
+    color: var(--gold-color);
+   
+}
+
+
+/* Welcom to food */
+.content{
+    width: 100%;
+    max-width: 500px;
+    margin: 280px 70px;
+}
+.welcome__food{
+    color: #000;
+    display: flex;
+    justify-content: center;
+    font-size: 2.1rem;
+    font-weight: 900;
+    letter-spacing: 13px;
+}
+.yellow{
+    color: var(--gold-color);
+}
+.content-p{
+    text-align: right;
+    margin-left: 21px;
+    line-height: 28px;
+}
+
+.password__report{
+    color: red;
+    
+    font-size: 0.8rem
+}
+
+.container-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

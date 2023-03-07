@@ -1,0 +1,85 @@
+:root {
+    --backgroup-color :#fff;
+    --tw-color :#33CCFF;
+    --fb-color:#4867aa;
+    --gg-color:#db4437;
+    --black-color:#000;
+    --primary-color:#fab55d;
+}
+
+.left {
+    float: left !important
+}
+
+.all {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+html {
+    /* 10px */
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+.grid {
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+.grid__row {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -5px;
+    margin-right: -5px;
+    
+}
+
+
+
+
+.col-4 {
+    position: relative;
+    width: 42.3%;
+    margin: 0 auto;
+}
+
+.col-6 {
+    
+    position: relative;
+    width: 57.7%;
+    margin: 0 auto;
+}
+
+/* Responsive */
+@media screen and (max-width : 1023px) {
+    .col-6 {
+        display: none;
+    }
+    .col-4 {
+        width: 100%;
+    }
+<<<<<<< HEAD
+    .sign-up {
+        left: auto;
+    }
+=======
+    
+   
+
+>>>>>>> reset-page
+}
+@media only screen and (max-width: 739px) {
+    .sign-up {
+        background-color: red;
+    }
+}
+    

@@ -1,0 +1,274 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+/* col-4 */
+.container {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;  
+
+}
+
+.br-img {
+    position: relative;
+    background: url(../../../../access/img/bg-auth.png);
+    background-size: 100% 100%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    bottom: 0;
+    height: 120vh;
+    max-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sign-up{
+    left: calc(8% - 1px);
+    top: -22px;
+    position: absolute;
+    margin: 30px auto ;
+    width: 67%;
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+}
+.sign-up__form-section {
+    margin-top: 0px;    
+    margin-bottom: 25px;
+
+}
+.sign-up__link a{
+    display: flex;
+    justify-content: center;    
+    text-align: center;
+    padding: 15px;
+    font-size: 3rem;
+    font-weight: 800;
+    text-decoration: none;
+    color: var(--black-color);
+}
+
+.sign-up__h3 {
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    padding: 10px 0 20px 0;
+    color: var(--primary-color);
+}
+
+
+.register{
+    padding: 5px;
+    width: 100%;
+}
+
+.register-label{
+    display: flex;
+    margin-bottom: 25px;
+    max-width: 100%;
+}
+
+
+.register-label__icon {
+    display: flex;
+    float: left;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+    padding: 15px;
+    font-size: 2rem;
+    color: #fff;
+    background-color: var(--primary-color);
+}
+
+.register-input {
+    display: inline-block;
+    width: 100%;
+    padding: 15px 20px 15px 20px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 2px ;
+    outline: rgb(239, 98, 3);
+    
+}
+
+.register-checkbox {
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: left;
+}
+
+.register-click {
+    margin: 10px;
+}
+
+.register-checkbox__label {
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.register-button {
+    width: 100%;
+    padding: 10px;
+    color: #fff;
+    background-color: var(--primary-color);
+    border: 1px solid rgba(0, 0, 0, 0.01);
+    border-radius: 2px; 
+    cursor: pointer;
+}
+
+.register-button:hover {
+    background-color: rgba(239, 98, 3, 0.55);
+}
+
+/* body */
+
+.register-extra{
+    float: left;
+    width: 100%;
+    margin: 25px 0;
+    text-align: center;
+    position: relative;
+}
+
+.register-extra::before {
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 100%;
+    height: 1px;
+    background: #23396726;
+    content: "";
+}
+
+.register-extra__with {
+    float: none;
+    display: inline-block;
+    background: #fff;
+    padding: 1px 20px;
+    z-index: 1;
+    position: relative;
+    font-size: 15px;
+    color: #535353;
+    text-transform: capitalize;
+}
+
+.register-login {
+    margin-bottom: 10px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+
+}
+
+.register-login__all {
+    width: 100%;
+    height: auto;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 2px;
+}
+
+.register-login__fb {
+    background-color: var(--fb-color);
+    color: #fff;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.register-login__tw {
+
+    background-color: var(--tw-color);
+    color: #fff;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.register-login__gg {
+    background-color: var(--gg-color);
+    color: #fff;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.return-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    font-weight: 500;
+    font-size: 1.6rem;
+}
+
+.return-login span a {
+    text-decoration: none;
+    font-weight: 300;
+}
+
+
+/* col-6 */
+.br-col {
+    position: relative;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.about-us {
+    margin-right: 2.5%;
+    text-align: right;
+    padding-bottom: 201px;
+}
+
+.about-welcome {
+    text-align: center;
+    font-size: 3.5rem;
+    font-weight: 900;
+    padding: 30px 0;
+}
+
+.color-yellow {
+    color: var(--primary-color);
+}
+
+.introduce {
+    display: inline-block;
+    align-items: right;
+}
+
+.introduce p {
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin: 0 140px;
+    line-height: 2.5rem;
+}
+
+.register-error {
+    color: red;
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+.return-login span a {
+    color: var(--primary-color);
+}

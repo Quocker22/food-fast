@@ -1,0 +1,989 @@
+<script src="https://kit.fontawesome.com/e1e4658b74.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.0/axios.min.js" integrity="sha512-OdkysyYNjK4CZHgB+dkw9xQp66hZ9TLqmS2vXaBrftfyJeduVhyy1cOfoxiKdi4/bfgpco6REu6Rb+V2oVIRWg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="./profile.js"></script>
+<link rel="stylesheet" href="./css/base.css">
+<link rel="stylesheet" href="./css/main.css">
+<link rel="stylesheet" href="../../access/header/css/Main.css">
+<link rel="stylesheet" href="../../access/header/css/basse.css">
+<link rel="stylesheet" href="../../access/header/css/reponsive.css">
+<script src="../../api/index.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<body>
+    <div id="ba" class="navbar">
+            <div class="logo">
+                <a href="">
+                    <img src="../../access/header/img/foodsto-logo.png" alt="">
+                </a>
+            </div>
+            <div class="navbar-menu">
+                <ul>
+                    <li>
+                        <a href="#" class="a_parent">
+                            <div class="wrap">
+                                <span class="text">HOME</span>
+                                <span class="icon">
+                                    <i class="fa-solid fa-caret-down"></i>
+                                </span>
+                            </div>
+                        </a>
+                        <div class="dd_menu">
+                            <ul>
+                                <li>
+                                   <a href="#" class="dd_menu_a">
+                                    <div class="wrap">
+                                        <span class="text">Main Home</span>
+                                       
+                                    </div>
+                                   </a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="dd_menu_a">
+                                     <div class="wrap">
+                                         <span class="text">Home 1</span>
+                                       
+                                     </div>
+                                    </a>
+                                 </li>
+
+                                 <li>
+                                    <a href="#" class="dd_menu_a">
+                                     <div class="wrap">
+                                         <span class="text">Home 2</span>
+                                        
+                                     </div>
+                                    </a>
+                                 </li>
+                        
+                            </ul>
+                        </div>
+                    </li>
+
+                        <li>
+                            <a href="#" class="a_parent">
+                                <div class="wrap" class="dd_menu_a">
+                                    <span class="text">PAGE</span>
+                                    <span class="icon">
+                                        <i class="fa-solid fa-caret-down"></i>
+                                    </span>
+                                </div>
+                            </a>
+                            <div class="dd_menu">
+                                <ul>
+                                    <li>
+                                       <a href="#" class="dd_menu_a">
+                                        <div class="wrap">
+                                            <span class="text">About Us</span>
+                                           
+                                        </div>
+                                       </a>
+                                    </li>
+    
+                                    <li>
+                                        <a href="#" class="dd_menu_a">
+                                         <div class="wrap">
+                                             <span class="text">Our Team</span>
+                                           
+                                         </div>
+                                        </a>
+                                     </li>
+    
+                                     <li>
+                                        <a href="#" class="dd_menu_a">
+                                         <div class="wrap">
+                                             <span class="text">Contract Us</span>
+                                            
+                                         </div>
+                                        </a>
+                                     </li>
+                            
+                                </ul>
+                            </div>
+                        </li>
+
+                            <li>
+                                <a href="#" class="a_parent">
+                                    <div class="wrap" class="dd_menu_a">
+                                        <span class="text">SHOP</span>
+                                        <span class="icon">
+                                            <i class="fa-solid fa-caret-down"></i>
+                                        </span>
+                                    </div>
+                                </a>
+                                <div class="dd_menu">
+                                    <ul>
+                                        <li>
+                                           <a href="#" class="dd_menu_a">
+                                            <div class="wrap">
+                                                <span class="text">Category List</span>
+                                               
+                                            </div>
+                                           </a>
+                                        </li>
+        
+                                        <li>
+                                            <a href="#" class="dd_menu_a">
+                                             <div class="wrap">
+                                                 <span class="text">Shop grid</span>
+                                               
+                                             </div>
+                                            </a>
+                                         </li>
+        
+                                         <li>
+                                            <a href="#" class="dd_menu_a">
+                                             <div class="wrap">
+                                                 <span class="text">Shop With Sidebar</span>
+                                                
+                                             </div>
+                                            </a>
+                                         </li>
+
+                                         
+                                         <li>
+                                            <a href="#" class="dd_menu_a">
+                                             <div class="wrap">
+                                                 <span class="text">Product Filter</span>
+                                                
+                                             </div>
+                                            </a>
+                                         </li>
+                                
+                                    </ul>
+                                </div>
+                            </li>
+
+                                <li>
+                                    <a href="#" class="a_parent">
+                                        <div class="wrap" class="dd_menu_a">
+                                            <span class="text">PRODUCT</span>
+                                            <span class="icon">
+                                                <i class="fa-solid fa-caret-down"></i>
+                                            </span>
+                                        </div>
+                                    </a>
+                                    <div class="dd_menu">
+                                        <ul>
+                                            <li>
+                                               <a href="#" class="dd_menu_a">
+                                                <div class="wrap">
+                                                    <span class="text">New Product</span>
+                                                   
+                                                </div>
+                                               </a>
+                                            </li>
+            
+                                            <li>
+                                                <a href="#" class="dd_menu_a">
+                                                 <div class="wrap">
+                                                     <span class="text">On Sale Product</span>
+                                                   
+                                                 </div>
+                                                </a>
+                                             </li>
+            
+                                             <li>
+                                                <a href="#" class="dd_menu_a">
+                                                 <div class="wrap">
+                                                     <span class="text">Blackorder Product</span>
+                                                    
+                                                 </div>
+                                                </a>
+                                             </li>
+
+                                             <li>
+                                                <a href="#" class="dd_menu_a">
+                                                 <div class="wrap">
+                                                     <span class="text">Out Of Stock Product</span>
+                                                   
+                                                 </div>
+                                                </a>
+                                             </li>
+
+                                             <li>
+                                                <a href="#" class="dd_menu_a">
+                                                 <div class="wrap">
+                                                     <span class="text">Variation Product</span>
+                                                   
+                                                 </div>
+                                                </a>
+                                             </li>
+
+                                             <li>
+                                                <a href="#" class="dd_menu_a">
+                                                 <div class="wrap">
+                                                     <span class="text">Grouper Product</span>
+                                                   
+                                                 </div>
+                                                </a>
+                                             </li>
+                                    
+                                        </ul>
+                                    </div>
+                                </li>
+
+                                    <li>
+                                        <a href="#" class="a_parent">
+                                            <div class="wrap" >
+                                                <span class="text">BLOG</span>
+                                                <span class="icon">
+                                                    <i class="fa-solid fa-caret-down"></i>
+                                                </span>
+                                            </div>
+                                        </a>
+                                        <div class="dd_menu">
+                                            <ul>
+                                                <li>
+                                                   <a href="#" class="dd_menu_a">
+                                                    <div class="wrap">
+                                                        <span class="text">One Column Blog</span>
+                                                       
+                                                    </div>
+                                                   </a>
+                                                </li>
+                
+                                                <li>
+                                                    <a href="#" class="dd_menu_a">
+                                                     <div class="wrap">
+                                                         <span class="text">Two Column Blog</span>
+                                                       
+                                                     </div>
+                                                    </a>
+                                                 </li>
+                
+                                                 <li>
+                                                    <a href="#" class="dd_menu_a">
+                                                     <div class="wrap">
+                                                         <span class="text">Three Column Blog</span>
+                                                        
+                                                     </div>
+                                                    </a>
+                                                 </li>
+    
+                                                 <li>
+                                                    <a href="#" class="dd_menu_a">
+                                                     <div class="wrap">
+                                                         <span class="text">Left Sidebar Blog</span>
+                                                       
+                                                     </div>
+                                                    </a>
+                                                 </li>
+    
+                                                 <li>
+                                                    <a href="#" class="dd_menu_a">
+                                                     <div class="wrap">
+                                                         <span class="text">Right Sidebar Blog</span>
+                                                       
+                                                     </div>
+                                                    </a>
+                                                 </li>
+    
+                                                
+                                        
+                                            </ul>
+                                        </div>
+                                    </li>
+                        
+                </ul>
+            </div>
+
+            <!-- icon information -->
+            <div class="box-icon">
+                <div class="icon-information">
+                    <ul>
+                        <li>
+                            <a href="#" class="page">
+                                <i class="fa-solid fa-user-secret"></i>
+                            </a>
+                            <div class="dd_menu_two">
+                                <ul>
+                                    <li>
+                                       <a href="#" class="dd_menu_b">
+                                        <div class="wrap">
+                                            <span class="text">Thông tin tài khoảng</span>
+                                           
+                                        </div>
+                                       </a>
+                                    </li>
+    
+                                    <li>
+                                        <a href="#" class="dd_menu_b">
+                                         <div class="wrap">
+                                             <span class="text">Đăng suất</span>
+                                           
+                                         </div>
+                                        </a>
+                                     </li>
+                            
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li>
+                            <a href="#" id="icon-all" class="dd_menu_b">
+                                <i class="fa-solid fa-heart"></i>
+                               </a>
+                        </li>
+
+                        <li>
+                            <a href="#" id="icon-shop" class="dd_menu_b">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                               </a>
+                        </li>
+
+                        <li>
+                            <a href="#" id="icon-seach" class="dd_menu_b">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                               </a>
+                        </li>
+                        <li>
+                            <a href="#" id="icon-menu" class="dd_menu_b">
+                                <i class="fa-solid fa-bars"></i>
+                               </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-4 offCL">
+                <div class="box-account">
+                    <!-- Logo -->
+                    <div class="account">
+                        <a href="../../index.html">
+                            <i class="fa-solid fa-house"></i>
+                        </a>
+
+                        <img src="./img/avt.png" alt="AVATAR" class="logo-profile">
+                            <div class="name-account">
+                                <aside class="user-name">USER NAME</aside>
+                            </div>
+                    </div>
+                    <!-- list -->
+                    <ul id="list-info">
+                        <li class="list-info__item active-profile">
+                            <a href="#" class="list-info__item-link">
+                                <div class="left">
+                                        <i class=" fa-solid fa-user"></i>
+                                        <span>Trang cá nhân</span>
+                                </div>
+                                        <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                            <div class="handle"></div>
+                        </li>
+                        <li class="list-info__item">
+                            <a href="#" class="list-info__item-link">
+                                <div class="left">
+                                    <i class="fa-solid fa-bell"></i>
+                                    <span>Thông báo</span>
+                                </div>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                            <div class="handle"></div>
+                        </li>
+                        <li class="list-info__item">
+                            <a href="#" class="list-info__item-link">
+                                <div class="left">
+                                    <i class="fa-solid fa-box"></i>
+                                    <span>Đơn hàng</span>
+                                </div>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                            <div class="handle"></div>
+                        </li>
+                        <li class="list-info__item">
+                            <a href="#" class="list-info__item-link">
+                                <div class="left">
+                                    <i class="fa-solid fa-right-left"></i>
+                                    <span>Đổi trả</span>
+                                </div>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                            <div class="handle"></div>
+                        </li>
+                        <li class="list-info__item">
+                            <a href="#" class="list-info__item-link">
+                                <div class="left">
+                                    
+                                    <i class="fa-solid fa-money-check"></i>
+                                    <span>Thanh Toán</span>
+
+                                </div>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                            <div class="handle"></div>
+                        </li>
+                        <li class="list-info__item">
+                            <a href="#" class="list-info__item-link">
+                                <div class="left">
+                                    
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    <span>Địa chỉ</span>
+
+                                </div>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                            <div class="handle"></div>
+                        </li>
+                        <li class="list-info__item">
+                            <a href="#" class="list-info__item-link">
+                                <div class="left">
+                                    
+                                    <i class="fa-solid fa-check"></i>
+                                    <span>Đánh giá</span>
+
+                                </div>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                            <div class="handle"></div>
+                        </li>
+                        <li class="list-info__item">
+                            <a href="#" class="list-info__item-link">
+                                <div class="left">
+                                
+                                    <i class="fa-solid fa-eye"></i>
+                                    <span>Đã xem</span>
+
+                                </div>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                            <div class="handle"></div>
+                        </li>
+                        <li class="list-info__item">
+                            <a href="#" class="list-info__item-link">
+                                <div class="left">
+                                    
+                                    <i class="fa-solid fa-heart"></i>
+                                    <span>Yêu thích</span>
+
+                                </div>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                            <div class="handle"></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div  class="col-8" >
+                <!-- Thông tin tài khoản -->
+                    <div class="handle-right open">
+                        <div class="information ">
+                            <h1 class="info">THÔNG TIN TÀI KHOẢN</h1>
+                            <a href="../../index.html" class="close">
+    
+                            </a>
+                        </div>
+                        <div class="information-all ">
+                            <div class="information-left">
+                                
+                                <div class="info-left" id="js-left">
+                                        <aside >Thông tin cá nhân</aside>
+                                </div>
+                                
+                                
+                                    <div class="form">
+                                        <div class="form-avt">
+                                            <i class="fa-solid fa-user"></i>
+                                        </div>
+                                        <div class="form-name-nickname">
+                                            <div class="form-name">
+                                                <span class="fullname">Họ & Tên </span>
+                                                <input type="name" class="full-name-input" placeholder="Full Name">
+                                            </div>
+                                            <div class="form-nick-name">
+                                                <span class="nick-name">Nick Name</span>
+                                                <input type="name" class="nick-name-input" placeholder="Nick Name">
+                                            </div> 
+                                        </div>
+                                    </div>
+    
+                                    <div class="user-date">
+                                        <label for="" class="date">ngày sinh</label>
+                
+                                        <div class="lable-ddmmyyyy">
+                                            <select name="day" id="" class="days">
+                                                <option value="days">Ngày</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="2">3</option>
+                                                <option value="2">4</option>
+                                                <option value="2">5</option>
+                                                <option value="2">6</option>
+                                                <option value="2">7</option>
+                                                <option value="2">8</option>
+                                                <option value="2">9</option>
+                                                <option value="2">10</option>
+                                                <option value="2">11</option>
+                                                <option value="2">12</option>
+                                            </select>
+    
+                                            <select name="month" id="" class="month">
+                                                <option value="month">Tháng</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="2">3</option>
+                                                <option value="2">4</option>
+                                                <option value="2">5</option>
+                                                <option value="2">6</option>
+                                                <option value="2">7</option>
+                                                <option value="2">8</option>
+                                                <option value="2">9</option>
+                                                <option value="2">10</option>
+                                                <option value="2">11</option>
+                                                <option value="2">12</option>
+                                            </select>
+    
+                                            <select name="year" id="" class="year">
+                                                <option value="year">Năm </option>
+                                                <option value="1">2022</option>
+                                                <option value="2">2021</option>
+                                                <option value="2">2020</option>
+                                                <option value="2">2019</option>
+                                                <option value="2">2018</option>
+                                                <option value="2">2017</option>
+                                                <option value="2">2016</option>
+                                                <option value="2">2015</option>
+                                                <option value="2">2014</option>
+                                                <option value="2">2013</option>
+                                                <option value="2">2012</option>
+                                                <option value="2">2011</option>
+                                            </select>
+                                        </div>
+                                    </div>
+    
+                                </div>
+        
+                            <div class="information-right">
+                                <div class="info-list">
+                                    <aside>Số điện thoại và Email</aside>
+                                </div>
+    
+                                <div class="phone-email ">
+                                    <div class="list-item-right">
+                                        <div class="phone bar">
+                                            <div class="item-phone bar">
+                                                <div class="phone-icon">
+                                                    <i class="info-icon fa-solid fa-phone"></i>
+                                                </div>
+                                                    <div class="phone-number">
+                                                        <span>Số điện thoại</span>
+                                                        <span class="phone-fix">0376976367</span>
+                                                    </div>
+                                            </div>
+                                            <div>
+                                                <a class="update" href="">Cập nhật</a>
+                                            </div>
+                                        </div>
+    
+                                        <div class="email bar">
+                                            <div class="item-email bar">
+                                                <div class="email-icon">
+                                                    <i class="info-icon fa-solid fa-envelope"></i>
+                                                </div>
+    
+                                                <div class="email-address">
+                                                    <span>Địa chỉ Email</span>
+                                                    <span class="email-fix">huyhoangpvc2k3@gmail.com</span>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <a class="update" href="">Cập nhật</a>
+                                            </div>
+                                        </div>
+                                    </div>
+    
+                                    
+                                </div>
+    
+                                <div class="info-list">
+                                    <aside>Bảo mật</aside>
+                                </div>
+    
+                                <div class="password-pin ">
+                                    <div class="list-item">
+                                        <div class="password bar">
+                                            <div class="item-password">
+                                                <i class="info-icon fa-solid fa-lock"></i>
+                                                <span>Thiết lập mật khẩu</span>
+                                            </div>
+                                            <div>
+                                                <a class="update" href="">Cập nhật</a>
+                                            </div>
+                                        </div>
+    
+                                        <div class="pin bar">
+                                            <div class="item-bar">
+                                                <i class="info-icon fa-solid fa-shield"></i>
+                                                <span>Thiết lập mã PIN</span>
+                                            </div>
+                                            <div>
+                                                <a class="update" href="">Cập nhật</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                   
+                                </div>
+    
+                                <div class="info-list">
+                                    <aside>Liên kết mạng xã hội</aside>
+                                </div>
+    
+                                <div class="social-network ">
+                                    <div class="list-item">
+                                        <div class="facebook bar">
+                                            <div class="list-fb bar">
+                                                <img src="https://frontend.tikicdn.com/_desktop-next/static/img/account/facebook.png" alt="" class="icon-fb">
+                                                <span class="item-fb " >Facebook</span>
+                                            </div>
+                                            <div>
+                                                <a class="update" href="">Cập nhật</a>
+                                            </div>
+                                        </div>
+    
+                                        <div class="google bar">
+                                            <div class="list-gg bar">
+                                                <img src="	https://frontend.tikicdn.com/_desktop-next/static/img/account/google.png" alt="" class="icon-gg">
+                                                <span class="item-gg ">Google</span>
+                                            </div>
+                                            <div>
+                                                <a class="update" href="">Cập nhật</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                  
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                <!-- Thông báo của tui -->
+                     <div class="handle-right">
+                        <div id="notification" class="notification">
+                            <div class="notice">
+                                    <h1>Thông báo của tôi</h1>
+                            </div>
+    
+                            </a>
+                        </div>
+                     </div>
+                <!--- Quản lý đơn hàng -->
+                    <div class="handle-right">
+                        <div id="order" class="order">
+                            <div class="order-management">
+                                <div class="">
+                                    <h1>Quản lý đơn hàng</h1>
+                                </div>
+                            </div>
+                            
+                            <div class="list-order">
+                                <ul class="list-noty">
+                                    <li class="list-noty-item"></li>
+                                    <li class="list-noty-item"></li>
+                                    <li class="list-noty-item"></li>
+                                </ul>
+                            </div> 
+                            </div>
+                    </div>
+                <!--- Số địa chỉ -->
+                    <div class="handle-right">
+                        <div id="address" class="address">
+                            <div class="my-address">
+                                    <h1>Số địa chỉ</h1>
+                            </div>
+                            
+                            <div class="list-address">
+                                <ul class="list-noty">
+                                    <li class="list-noty-item"></li>
+                                    <li class="list-noty-item"></li>
+                                    <li class="list-noty-item"></li>
+                                </ul>
+                            </div> 
+                            </div>
+                    </div>
+                <!--- Thông tin thành toán  -->
+                    <div class="handle-right">
+                        <div id="biiling" class="billing">
+                            <div class="billing-info">
+                                    <h1>Thông tin thanh toán</h1>
+                            </div>
+                            
+                            <div class="list-bill">
+                                <ul class="list-noty">
+                                    <li class="list-noty-item"></li>
+                                    <li class="list-noty-item"></li>
+                                    <li class="list-noty-item"></li>
+                                </ul>
+                            </div> 
+                            </div>
+                    </div>
+                <!--- Đánh giá sản phẩm  -->
+                    <div class="handle-right">
+                        <div id="product" class="product">
+                            <div class="review-product">
+        
+                                    <h1>Đánh giá sản phẩm</h1>
+                            </div>
+                            
+                            <div class="list-product">
+                                <ul class="list-noty">
+                                    <li class="list-noty-item"></li>
+                                    <li class="list-noty-item"></li>
+                                    <li class="list-noty-item"></li>
+                                </ul>
+                            </div> 
+                            </div>
+                    </div>
+                <!--- Sản phẩm đã xem -->
+                    <div class="handle-right">
+                        <div id="view" class="viewed-products">
+                            <div class="viewed">
+        
+                                    <h1>Sản phẩm đã xem</h1>
+                            </div>
+                            
+                            <div class="list-viewed">
+                                <ul class="list-noty">
+                                    <li class="list-noty-item"></li>
+                                    <li class="list-noty-item"></li>
+                                    <li class="list-noty-item"></li>
+                                </ul>
+                            </div> 
+                            </div>
+                    </div>
+                <!--- Sản phẩm yêu thích  -->
+                    <div class="handle-right">
+                        <div id="liked" class="product-liked">
+                            <div class="liked">
+                                    <h1>Sản phẩm yêu thích</h1>
+                            </div>
+                            
+                            <div class="list-product-liked">
+                                <ul class="list-noty">
+                                    <li class="list-noty-item"></li>
+                                    <li class="list-noty-item"></li>
+                                    <li class="list-noty-item"></li>
+                                </ul>
+                            </div> 
+                            </div>
+                    </div>
+                    <!--- Sản phẩm mua sau  -->
+                    <div class="handle-right">
+                        <div id="buy-later" class="buy-later">
+                            <div class="later">
+        
+                                    <h1>Sản phẩm đã mua</h1>
+                            </div>
+                            
+                            <div class="list-buy-later">
+                                <ul class="list-noty">
+                                    <li class="list-noty-item"></li>
+                                    <li class="list-noty-item"></li>
+                                    <li class="list-noty-item"></li>
+                                </ul>
+                            </div> 
+                        </div>
+                    </div>
+                <!--- Đánh giá của tôi -->
+                    <div class="handle-right">
+                        <div id="review" class="my-review">
+                            <div class="review">
+    
+                                    <h1>Đánh giá của tôi</h1>
+                            </div>
+                            
+                            <div id="list-review" class="list-my-review">
+                                <ul class="list-noty">
+                                    <li class="list-noty-item"></li>
+                                    <li class="list-noty-item"></li>
+                                    <li class="list-noty-item"></li>
+                                </ul>
+                            </div> 
+                </div>
+                    </div>
+            </div>
+        </div>  
+        <!--footer-->
+        <div class="footer-information">
+            <div class="grid footer-all">
+                <div class="row">
+                    <div class="col-3">
+                        <div class="footer-img">
+                            <img src="./img/foodsto-logo.png" alt="">
+                        </div>
+                        <div class="footer-comment">
+                            <p>
+                                Subscribe to our newsletter and get 10% off your first purchase.
+                            </p>
+                        </div>
+                        <div class="footer-icon">
+                            <a href="">
+                                <i class="fa-brands fa-square-facebook"></i>
+                            </a>
+
+                            <a href="">
+                                <i class="fa-brands fa-square-instagram"></i>
+                            </a>
+
+                              <a href="">
+                                <i class="fa-brands fa-square-twitter"></i>
+                            </a>
+
+                            <a href="">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+
+                    <div class="col-3">
+                        <div class="footer-content">
+                            <p>
+                                Link
+                            </p>
+                        </div>
+                        <div class="footer-link">
+                            <a href="">
+                                <i class="fa-solid fa-angle-right"></i> My account
+                            </a>
+                        </div>
+                        <div class="footer-link">
+                            <a href="">
+                                <i class="fa-solid fa-angle-right"></i> Checkout
+                            </a>
+                        </div>
+
+                        <div class="footer-link">
+                            <a href="">
+                                <i class="fa-solid fa-angle-right"></i> Wishlist
+                                
+                            </a>
+                        </div>
+
+                        <div class="footer-link">
+
+                            <a href="">
+                                <i class="fa-solid fa-angle-right"></i> Shopping Cart
+                            </a>
+                        </div>
+                    </div>
+
+                   
+                    <div class="col-3">
+                        <div class="footer-content">
+                            <p>
+                                Information
+                            </p>
+                        </div>
+                        <div class="footer-link">
+                            <a href="">
+                                <i class="fa-solid fa-angle-right"></i> About Us
+                            </a>
+                        </div>
+                        <div class="footer-link">
+                            <a href="">
+                                <i class="fa-solid fa-angle-right"></i> Our Team
+                            </a>
+                        </div>
+
+                        <div class="footer-link">
+                            <a href="">
+                                <i class="fa-solid fa-angle-right"></i> Contract Us
+                                
+                            </a>
+                        </div>
+
+                        <div class="footer-link">
+
+                            <a href="">
+                                <i class="fa-solid fa-angle-right"></i> Blog
+                            </a>
+                        </div>
+                    </div>
+
+
+                    <div class="col-3">
+                        <div class="footer-content">
+                            <p>
+                                Quick Contact
+                            </p>
+                        </div>
+                        <div class="footer-house">
+                                <i class="fa-solid fa-house"></i>
+                                <span>1234 North Avenue Luke Lane, South Bend, IN 360001</span>
+                        </div>
+                        <div class="footer-mail">
+                            <a href="">
+                                <i class="fa-solid fa-envelope"></i> dinhthaituan332003@gmail.com
+                            </a>
+                        </div>
+
+                        <div class="footer-phone">
+                            <a href="">
+                                <i class="fa-solid fa-phone"></i> +0934160908
+                                
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="comment"></div>
+            
+                <div class="footer-and">
+                    <div class="footer-end">
+                        <p>
+                            Copyright 2023 foodsto All Rights Reserved.
+                        </p>
+                    </div>
+            </div>
+            
+    </div>
+    </div>
+          
+<script >
+    getValue();
+    async function getValue() {
+    let data = await getUser();
+    console.log(data);
+
+    const userName = document.querySelector('.user-name')
+    const inputFullName = document.querySelector('.full-name-input')
+    const phoneNumber = document.querySelector('.phone-fix')
+    const emailAddress = document.querySelector('.email-fix')
+
+
+    userName.innerHTML = data.data.fullName
+    inputFullName.value = data.data.fullName
+    phoneNumber.innerHTML = data.data.phone
+    emailAddress.innerHTML = data.data.email
+}
+</script>
+
+<script>
+       const $ = document.querySelector.bind(document);
+        const $$ = document.querySelectorAll.bind(document);
+
+        const tabs = $$(".list-info__item");
+        const menus = $$(".handle-right");
+
+        tabs.forEach((tab , index) => {
+            tab.onclick = function () {
+                const menu = menus[index]
+                console.log(menu);
+
+                $('.list-info__item.active-profile').classList.remove('active-profile')
+                $('.handle-right.open').classList.remove('open')
+
+                this.classList.add('active-profile')
+                menu.classList.add('open')
+            } 
+        })  
+
+
+</script>
+
+</body>

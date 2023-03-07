@@ -1,0 +1,413 @@
+
+
+.container {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: auto;
+    background-color: white;
+} 
+/* col-4 */
+
+.account {
+    display: flex;
+    height: 10vh;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    min-height: 50px;
+}
+
+.account > a {
+    font-size: 33px;
+    margin-right: 16%;
+    color: rgb(59,183,126)
+}
+
+.name-account {
+    font-size: 1.6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 10px;
+    line-height: 2rem;
+    font-weight: 200;
+}
+
+.icon-list {
+    margin-right: -2px;
+    font-size: 2rem;
+    width: 10%;
+}
+
+.logo-profile{
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    width: 15%;
+    margin-left: -10px;
+}
+
+.user-name {
+    font-weight: 700;
+    color: black;
+}
+
+#list-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 15px;
+    border: solid 1px #ccc;
+    border-radius: 4px;
+}
+
+.list-info__item { 
+    padding: 0 18px;
+    display: flex;
+    flex-direction: column;
+}
+
+.list-info__item:not(:last-child) {
+    margin-bottom: 20px;
+}   
+
+.list-info__item:last-child {   
+    margin-bottom: 20px;
+}
+
+.list-info__item-link {
+    padding: 5px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.left:first-child {
+    padding-right: 5px ;
+}
+
+.space-item {
+    width: 20px;
+    padding-right: 20px;
+}
+
+.handle {
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
+/* col-8 */
+
+/* THONG TIN TAI KHOAN */
+.handle-right {
+    width: auto;
+    display: none;
+}
+.close {
+    color: rgba(0, 0, 0, 0.4);
+    font-size: 3rem;
+    margin-top: 25px;
+}
+
+.information {
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 0px 20px 0;
+}
+
+
+.information h1 {
+    margin-top: 30px;
+    font-weight: 600;
+    font-size: 3rem;
+}
+
+.account-user {
+    background-color: white;
+    width: 100%;
+    height: auto;
+}
+
+.information-all {
+    display: flex;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 30%);;
+
+}
+/* info left */
+.information-left {
+    width: 450px;
+    margin-left: 15px;
+}
+
+.border-right {
+    border-right: 1px dashed rgba( 0, 0, 0, 0.7);
+}
+
+.info-left {
+    padding: 20px 0;
+    font-size: 1.6rem;
+    font-weight: 300;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.form {
+    display: flex;
+    align-items: center;
+}
+
+.form-avt {
+    font-size: 4rem;
+    padding: 20px;
+    border: 4px solid rgb(59,183,126);
+    border-radius: 50%;
+    color: rgb(59,183,126);
+}
+
+.form-name-nickname {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.6rem;
+
+}
+
+.form-name {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.full-name-input {
+    padding: 10px;
+    width: 70%;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
+.form-nick-name {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.nick-name-input {
+    padding: 10px;
+    width: 70%;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+/* info right */
+
+.information-right {
+    width: 450px;
+}
+
+.info-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    padding: 15px;
+    color: rgba( 0, 0, 0, 0.7);
+}
+
+.list-item-right {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.4rem;
+}
+
+.update{
+    text-decoration: none;
+    color: rgb(59,183,126);
+    border: solid 1px rgb(59,183,126)
+}
+
+.phone-email {
+    padding: 20px;
+}
+
+.password-pin {
+    padding: 20px;
+    font-size: 1.4rem;
+}
+
+.social-network {
+    padding: 20px;
+}
+
+.info-icon {
+    padding: 5px;
+    color: rgba(0, 0, 0, 0.4);
+    font-size: 2rem;
+}
+
+.phone {
+    padding: 0 0 50px 0;
+
+}
+
+.phone-number {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5px;
+    line-height: 2rem;
+}
+
+.email-address{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 5px;
+    line-height: 2rem;
+
+}
+
+.password {
+    padding: 0 0 50px 0;
+
+}
+
+.facebook {
+    padding: 0 0 10px 0;
+
+}
+
+.item-fb {
+    font-size: 1.6rem;
+    padding: 20px;
+}
+
+.item-gg {
+    font-size: 1.6rem;
+    padding: 20px;
+}
+
+.user-date {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.date {
+    font-size: 1.6rem;
+    padding: 0 15px;
+    margin-right: 10px;
+}
+
+.days {
+    padding: 5px 12px;
+    border-radius: 4px;
+    margin-right: 10px;
+    border: 1px solid rgba( 0, 0, 0, 0.2);
+    cursor: pointer;
+
+}
+
+.month {
+    padding: 5px 12px;
+    border-radius: 4px;
+    margin-right: 10px;
+    border: 1px solid rgba( 0, 0, 0, 0.2);
+    cursor: pointer;
+
+
+}
+
+.year {
+    padding: 5px 12px;
+    border-radius: 4px;
+    margin-right: 10px;
+    border: 1px solid rgba( 0, 0, 0, 0.2);
+    cursor: pointer;
+
+
+}
+
+
+
+/* THONG BAO CUA TOI */
+.notification {
+    display: none;
+}
+.notice{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 56px;
+    width: 80%;
+}
+
+.list-notice {
+    background-color: white;
+    width: 90%;
+    height: 70%;
+}
+
+.list-notice-item {
+    display: flex;
+}
+
+
+/* Quản lý đơn hàng  */
+.order {
+    display: none;
+}
+
+/* <!-- Số địa chỉ --> */
+.address {
+    display: none;
+}
+/* <!--- Thông tin thành toán  --> */
+.billing {
+    display: none;
+}
+
+/* <!--- Đánh giá sản phẩm  --> */
+.viewed-products {
+    display: none;
+}
+
+/* <!--- Sản phẩm đã xem --> */
+.viewed-products {
+    display: none;
+}
+
+/* <!--- Sản phẩm yêu thích  --> */
+.product-liked {
+    display: none;
+}
+
+/* <!--- Sản phẩm mua sau  --> */
+.buy-later {
+    display: none;
+}
+/* <!--- Đánh giá của tôi --> */
+
+.my-review {
+    display: none;
+}

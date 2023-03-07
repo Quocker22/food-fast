@@ -1,0 +1,114 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.0/axios.min.js" integrity="sha512-OdkysyYNjK4CZHgB+dkw9xQp66hZ9TLqmS2vXaBrftfyJeduVhyy1cOfoxiKdi4/bfgpco6REu6Rb+V2oVIRWg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://kit.fontawesome.com/e1e4658b74.js" crossorigin="anonymous"></script>
+<script src="../api/index.js"></script>
+<link rel="stylesheet" href="./register/assets/css/main.css">
+<link rel="stylesheet" href="./register/assets/css/base.css">
+<body>
+    <div class="container">
+        <div class="grid__row">
+            <!-- start col 4 -->
+            <div class="col-4 ">
+                 <div class="br-img">
+
+                <div class="sign-up">
+                    <div class="sign-up__form-section">
+                            <div class="sign-up__link">
+                                <a href="">FoodSto</a>
+                            </div>
+                            <div class="sign-up__h3">
+                                <h3>Create An Account</h3>
+                            </div>
+                    </div>
+
+                    <div class="register">
+                            <div class="register-label ">
+                                <i class="register-label__icon fa-solid fa-user"></i>
+                                <input type="name" class="register-input register-name" placeholder="FullName">
+                            </div>
+
+                            <div class="register-label">
+                                <i class="register-label__icon fa-solid fa-envelope"></i>
+                                <input type="email" class="register-input register-email"  placeholder="Email">
+                            </div>
+
+                            <div class="register-label">
+                                <i class="register-label__icon fa-solid fa-lock"></i>
+                                <input type="password" class="register-input register-password"  placeholder="PassWord">
+                            </div>
+
+                            <div class="register-label">
+                                <i class="register-label__icon fa-solid fa-address-book"></i>
+                                <input type="address" class="register-input register-address"  placeholder="Address">
+                            </div>
+
+                            <div class="register-label">
+                                <i class="register-label__icon fa-solid fa-phone"></i>
+                                <input type="phone" class="register-input register-phone"  placeholder="Phone">
+                            </div>
+
+                            <div class="register-error"></div>
+
+
+                            <div class="register-checkbox">
+                                <input type="checkbox" class="register-click" checked="checked">
+                                <label for="" class="register-checkbox__label">I agree to the terms of service</label>
+                            </div>
+
+                            <button class="register-button" onclick="getDataFromInputRegister()">Register</button>
+
+                            <div class="register-extra">
+                                <span class="register-extra__with">Or Login With</span>
+                            </div>
+
+                            <div class="register-login">
+                                <a href="" class="register-login__fb register-login__all">FaceBook</a>
+                                <a href="" class="register-login__tw register-login__all">Twitter</a>
+                                <a href="" class="register-login__gg register-login__all">Google</a>
+                            </div>
+
+                            <div class="return-login">
+                                <span>
+                                    Don't have an account?
+                                    <a href="./login.html">Login here</a>
+                                </span>
+                            </div>
+                    </div>
+                </div>
+            
+                </div>     
+            </div>
+            <!-- End col-4 -->
+
+            <!-- start col-6 -->
+            <div class="col-6 ">
+                <div class="br-col">
+                <div class="about-us">
+                    <div class="about-welcome">
+                        <span class="color-yellow">W</span>
+                        <span class="color-yellow">E</span>
+                        <span class="color-yellow">L</span>
+                        <span>C</span>
+                        <span>O</span>
+                        <span>M</span>
+                        <span>E</span>
+                        <span class="color-yellow">T</span>
+                        <span class="color-yellow">O</span>
+                        <span>F</span>
+                        <span>O</span>
+                        <span>O</span>
+                        <span>D</span>
+                    </div>
+
+                    <div class="introduce">
+                        <p class="">The Food is a website specializing in selling good quality food.
+                            Ensuring food hygiene and safety without harmful substances, censored by inspectors.</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <!-- End col-6 -->
+        </div>
+    </div>
+
+
+</body>

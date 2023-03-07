@@ -1,0 +1,9 @@
+version: '3'
+services:
+  food-web:
+    image: food/food-web
+    build: .
+    container_name: food-web
+    restart: always
+    ports:
+      - "8080:80"

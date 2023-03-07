@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food web</title>
+    <link rel="shortcut icon" type="image/png" href="/access/favicon.png"/>
+    <link rel="stylesheet" href="./auth/login.html">
+    <link rel="stylesheet" href="./access/header/css/basse.css">
+    <link rel="stylesheet" href="./access/header/css/Main.css">
+    <link rel="stylesheet" href="./access/header/css/reponsive.css">
+    <link rel="stylesheet" href="./access/img/">
+    <link rel="stylesheet" href="./access/header/css/reponsive.css">
+    <script src="https://kit.fontawesome.com/e1e4658b74.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.0/axios.min.js" integrity="sha512-OdkysyYNjK4CZHgB+dkw9xQp66hZ9TLqmS2vXaBrftfyJeduVhyy1cOfoxiKdi4/bfgpco6REu6Rb+V2oVIRWg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./api/index.js"></script>
+    <link rel="stylesheet" href="./auth/login.html">
+    <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- header -->
+    <div class="wrapper">
+        <div id="ba" class="navbar">
+            <div class="logo">
+                <a href="">
+                    <img src="./access/header/img/foodsto-logo.png" alt="">
+                </a>
+            </div>
+            <div  class="navbar-menu">
+                <ul>
+                    <li>
+                        <a href="#" class="a_parent">
+                            <div class="wraps">
+                                <span class="text">HOME</span>
+                                <span class="icon">
+                                    <i class="fa-solid fa-caret-down"></i>
+                                </span>
+                            </div>
+                        </a>
+                        <div class="dd_menu">
+                            <ul>
+                                <li>
+                                   <a href="#" class="dd_menu_a">
+                                    <div class="wraps">
+                                        <span class="text">Main Home</span>
+                                       
+                                    </div>
+                                   </a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="dd_menu_a">
+                                     <div class="wraps">
+                                         <span class="text">Home 1</span>
+                                       
+                                     </div>
+                                    </a>
+                                 </li>
+
+                                 <li>
+                                    <a href="#" class="dd_menu_a">
+                                     <div class="wraps">
+                                         <span class="text">Home 2</span>
+                                        
+                                     </div>
+                                    </a>
+                                 </li>
+                        
+                            </ul>
+                        </div>
+                    </li>
+
+                        <li>
+                            <a href="#" class="a_parent">
+                                <div class="wrap" class="dd_menu_a">
+                                    <span class="text">PAGE</span>
+                                    <span class="icon">
+                                        <i class="fa-solid fa-caret-down"></i>
+                                    </span>
+                                </div>
+                            </a>
+                            <div class="dd_menu">
+                                <ul>
+                                    <li>
+                                       <a href="#" class="dd_menu_a">
+                                        <div class="wraps">
+                                            <span class="text">About Us</span>
+                                           
+                                        </div>
+                                       </a>
+                                    </li>
+    
+                                    <li>
+                                        <a href="#" class="dd_menu_a">
+                                         <div class="wraps">
+                                             <span class="text">Our Team</span>
+                                           
+                                         </div>
+                                        </a>
+                                     </li>
+    
+                                     <li>
+                                        <a href="#" class="dd_menu_a">
+                                         <div class="wraps">
+                                             <span class="text">Contract Us</span>
+                                            
+                                         </div>
+                                        </a>
+                                     </li>
+                            
+                                </ul>
+                            </div>
+                        </li>
+
+                            <li>
+                                <a href="#" class="a_parent">
+                                    <div class="wrap">
+                                        <span class="text">SHOP</span>
+                                        <span class="icon">
+                                            <i class="fa-solid fa-caret-down"></i>
+                                        </span>
+                                    </div>
+                                </a>
+                                <div class="dd_menu">
+                                    <ul>
+                                        <li>
+                                           <a href="#" class="dd_menu_a">
+                                            <div class="wraps">
+                                                <span class="text">Category List</span>
+                                               
+                                            </div>
+                                           </a>
+                                        </li>
+        
+                                        <li>
+                                            <a href="#" class="dd_menu_a">
+                                             <div class="wraps">
+                                                 <span class="text">Shop grid</span>
+                                               
+                                             </div>
+                                            </a>
+                                         </li>
+        
+                                         <li>
+                                            <a href="#" class="dd_menu_a">
+                                             <div class="wraps">
+                                                 <span class="text">Shop With Sidebar</span>
+                                                
+                                             </div>
+                                            </a>
+                                         </li>
+
+                                         
+                                         <li>
+                                            <a href="#" class="dd_menu_a">
+                                             <div class="wraps">
+                                                 <span class="text">Product Filter</span>
+                                                
+                                             </div>
+                                            </a>
+                                         </li>
+                                
+                                    </ul>
+                                </div>
+                            </li>
+
+                                <li>
+                                    <a href="#" class="a_parent">
+                                        <div class="wrap">
+                                            <span class="text">PRODUCT</span>
+                                            <span class="icon">
+                                                <i class="fa-solid fa-caret-down"></i>
+                                            </span>
+                                        </div>
+                                    </a>
+                                    <div class="dd_menu">
+                                        <ul>
+                                            <li>
+                                               <a href="#" class="dd_menu_a">
+                                                <div class="wraps">
+                                                    <span class="text">New Product</span>
+                                                   
+                                                </div>
+                                               </a>
+                                            </li>
+            
+                                            <li>
+                                                <a href="#" class="dd_menu_a">
+                                                 <div class="wraps">
+                                                     <span class="text">On Sale Product</span>
+                                                   
+                                                 </div>
+                                                </a>
+                                             </li>
+            
+                                             <li>
+                                                <a href="#" class="dd_menu_a">
+                                                 <div class="wraps">
+                                                     <span class="text">Blackorder Product</span>
+                                                    
+                                                 </div>
+                                                </a>
+                                             </li>
+
+                                             <li>
+                                                <a href="#" class="dd_menu_a">
+                                                 <div class="wraps">
+                                                     <span class="text">Out Of Stock Product</span>
+                                                   
+                                                 </div>
+                                                </a>
+                                             </li>
+
+                                             <li>
+                                                <a href="#" class="dd_menu_a">
+                                                 <div class="wraps">
+                                                     <span class="text">Variation Product</span>
+                                                   
+                                                 </div>
+                                                </a>
+                                             </li>
+
+                                             <li>
+                                                <a href="#" class="dd_menu_a">
+                                                 <div class="wraps">
+                                                     <span class="text">Grouper Product</span>
+                                                   
+                                                 </div>
+                                                </a>
+                                             </li>
+                                    
+                                        </ul>
+                                    </div>
+                                </li>
+
+                                    <li>
+                                        <a href="#" class="a_parent">
+                                            <div class="wrap" >
+                                                <span class="text">BLOG</span>
+                                                <span class="icon">
+                                                    <i class="fa-solid fa-caret-down"></i>
+                                                </span>
+                                            </div>
+                                        </a>
+                                        <div class="dd_menu">
+                                            <ul>
+                                                <li>
+                                                   <a href="#" class="dd_menu_a">
+                                                    <div class="wraps">
+                                                        <span class="text">One Column Blog</span>
+                                                       
+                                                    </div>
+                                                   </a>
+                                                </li>
+                
+                                                <li>
+                                                    <a href="#" class="dd_menu_a">
+                                                     <div class="wraps">
+                                                         <span class="text">Two Column Blog</span>
+                                                       
+                                                     </div>
+                                                    </a>
+                                                 </li>
+                
+                                                 <li>
+                                                    <a href="#" class="dd_menu_a">
+                                                     <div class="wraps">
+                                                         <span class="text">Three Column Blog</span>
+                                                        
+                                                     </div>
+                                                    </a>
+                                                 </li>
+    
+                                                 <li>
+                                                    <a href="#" class="dd_menu_a">
+                                                     <div class="wraps">
+                                                         <span class="text">Left Sidebar Blog</span>
+                                                       
+                                                     </div>
+                                                    </a>
+                                                 </li>
+    
+                                                 <li>
+                                                    <a href="#" class="dd_menu_a">
+                                                     <div class="wraps">
+                                                         <span class="text">Right Sidebar Blog</span>
+                                                       
+                                                     </div>
+                                                    </a>
+                                                 </li>
+    
+                                                
+                                        
+                                            </ul>
+                                        </div>
+                                    </li>
+                        
+                </ul>
+            </div>
+
+            <!-- icon information -->
+            <div class="box-icon">
+                <div class="icon-information">
+                    <ul>
+                        <li>
+                            <a href="#" class="page">
+                                <i class="fa-solid fa-user-secret"></i>
+                            </a>
+                            <div class="dd_menu_two">
+                                <ul class="12341234">
+                                    <li class="information">
+                                       <a href="/modules/profile/profile.html" class="dd_menu_b">
+                                        <div class="wrap">
+                                            <span class="text">Thông tin tài khoảng</span>
+                                           
+                                        </div>
+                                       </a>
+                                    </li>
+    
+                                    <li>
+                                        <a href="/auth/login.html" class="dd_menu_b">
+                                         <div class="wrap">
+                                             <span class="text">Đăng xuất</span>
+                                           
+                                         </div>
+                                        </a>
+                                     </li>
+                            
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li>
+                            <a href="#" id="icon-all" class="dd_menu_b">
+                                <i class="fa-solid fa-heart"></i>
+                               </a>
+                        </li>
+
+                        <li>
+                            <a href="#" id="icon-shop" class="dd_menu_b">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                               </a>
+                        </li>
+
+                        <li>
+                            <a href="#" id="icon-seach" class="dd_menu_b">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                               </a>
+                        </li>
+                        <li>
+                            <a href="#" id="icon-menu" class="dd_menu_b">
+                                <i class="fa-solid fa-bars"></i>
+                               </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- slider -->
+    <div class="slider">
+        <div class="slider__display">
+            <div class="slider__shop">
+                <div class="slider__pen">
+                    <h1>Fresh</h1>
+                    <h1 class="green">Grocery</h1>
+                </div>
+                <div class="pen__call">
+                    <h1>Shopping</h1>
+                </div>
+            </div>
+            <div class="slider__pencel">
+                <p>It is a long established fact that a reader will be the readable content of page</p>
+            </div>
+            <div class="slider__view">
+                <a href="" class="slider__more">VIEW MORE</a>
+                <i class="fa-solid fa-right-long"></i>
+            </div>
+        </div>
+        <div class="slider__img">
+            <div class="slider__photo">
+                <img src="./access/header/img/man.png" alt="" class="photo">
+            </div>
+        </div>
+    </div>
+    <!-- logo -->
+            <div class="logo-salads">
+                <div class="comment-one">
+                    <div class="logo-img">
+                        <img src="./access/header/img/salas2.webp" alt="">
+                    </div>
+                    <div class="logo-comment">
+                        <h2>
+                            Salads
+                        </h2>
+                        <p>
+                            Order nutritious salads
+                        </p>
+                    </div>
+            
+                <div class="logo-img">
+                    <img src="./access/header/img/shoppingrau.png" alt="">
+                </div>
+                <div class="logo-comment">
+                    <h2>
+                        Cart Value
+                    </h2>
+                    <p>
+                        Cart value review your cart
+                    </p>
+                </div>
+        
+                <div class="logo-img">
+                    <img src="./access/header/img/support.jpg" alt="">
+                </div>
+                <div class="logo-comment">
+                    <h2>
+                        Support
+                    </h2>
+                    <p>
+                        Fresh grocery delivered
+                    </p>
+                </div>
+     </div>
+    
+     </div>
+    </div>
+
+
+    
+
+    <!-- contract -->
+    <div class="contract-all">
+        <div class="contract-food">
+          
+
+
+               
+        </div>
+    </div>
+    
+
+    
+    <script>
+        // thanh cuon header
+        window.onscroll = function(){
+            var header =document.getElementById('ba');
+            if (document.documentElement.scrollTop > 100 || document.body.scrollTop >100){
+            header.style.position ='fixed';
+            header.style.left = 0;
+            header.style.right = 0;
+            header.style.backgroundColor  ='#b5e8d0';
+            header.style.zIndex = 9;
+        } else {
+            header.style.position ='relative';
+        }
+    }
+        // click menu
+        const a_parent = document.querySelectorAll(".a_parent");
+    
+        a_parent.forEach(function(a_parent_item){
+            a_parent_item.addEventListener("click" , function(){
+                a_parent_item.classList.add("active");
+            })
+        })
+
+        
+        a_parent.forEach(function(a_parent_item){
+            
+            a_parent_item.addEventListener("blur", function(){
+                a_parent_item.classList.remove("active")
+        });
+        })
+
+
+    
+        // // click icon
+        jQuery.fn.extend({
+        setMenu:function () {
+        return this.each(function() {
+            var containerMenu = $(this);
+
+            var itemMenu = containerMenu.find('.page');
+            itemMenu.click(function () {
+                var subMenuitem = containerMenu.find('.dd_menu_two');
+                subMenuitem.slideToggle(500);
+
+            });
+
+            $(document).click(function (e) {
+                if (!containerMenu.is(e.target) &&
+                    containerMenu.has(e.target).length === 0) {
+                     var isOpened =
+                        containerMenu.find('.dd_menu_two').css("display");
+
+                     if (isOpened == 'block') {
+                         containerMenu.find('.dd_menu_two').slideToggle(500);
+                     }
+                }
+            });
+        });
+    },
+});
+
+
+$('.icon-information').setMenu();
+
+// icon-menu
+jQuery.fn.extend({
+        setMenu:function () {
+        return this.each(function() {
+            var containerMenu = $(this);
+
+            var itemMenu = containerMenu.find('#icon-menu');
+            itemMenu.click(function () {
+                var subMenuitem = containerMenu.find('.navbar-menu');
+                subMenuitem.slideToggle(500);
+
+            });
+
+            $(document).click(function (e) {
+                if (!containerMenu.is(e.target) &&
+                    containerMenu.has(e.target).length === 0) {
+                     var isOpened =
+                        containerMenu.find('.navbar-menu').css("display");
+
+                     if (isOpened == 'none') {
+                         containerMenu.find('.navbar-menu').slideToggle(500);
+                     }
+                }
+            });
+        });
+    },
+});
+
+
+$('.wrapper').setMenu();
+
+  
+     
+    </script>
+
+ 
+    <!-- logo -->
+    <!-- //  Phần của hoàng : bắt đầu -->
+    <div class="shopping">
+        <!-- title -->
+        <div class="title"> 
+            <span>Organically Produced</span>
+            <h2>New Organic Add-ons</h2>
+            <div class="divider"></div>
+        </div>
+  
+        <!-- list -->
+        <div class="tooltip">
+            <ul id="list-tooltip">
+                
+            </ul>
+            <!-- Breakfast Cereals -->
+                <!-- Danh sách các món -->
+                <!-- Loại 1 : Breakfast Cereals  -->
+                <div class="menu-breakfast open">
+
+                </div>
+                <!-- Loại 2 : Fruit Yogurt  -->
+                
+ 
+              
+        
+                <!-- Loại 3 : Salads  -->
+     
+ 
+               
+                    
+        </div>
+            
+            
+            
+        </div>
+        <div class="pseudo-class" onclick="getElement()
+        
+        ">
+            <div class="box">
+                <div class="box-content">
+                    <div class="box-left">
+                        <img src="./access/header/img/snack-1.jpg" alt="" class="snack-1">
+                        </div>
+                    
+                    <div class="box-right">
+                        <div class="child-box">
+
+                            <span>Chips</span>
+                            
+                            <h2>$10.00</h2>
+                            
+                            <p>A side dish, sometimes referred to as a side order,
+                                side item, or simply a side,
+                                is a food item that accompanies the entrée or main course at a meal.</p>
+
+                            <div id="but-amount">
+                              <div class="plus-minus">
+                                <button class="minus-btn" onclick="handleMinus()"><i class="fa-solid fa-minus"></i></button>
+                                  <input type="1" name="amount" id="amount" value="1">
+                                <button class="plus-btn" onclick="handlePlus()"><i class="fa-solid fa-plus"></i></button>
+                              </div>
+                              <div class="link-cart">
+                                <a>ADD TO CART
+                                    <i class="fa-sharp fa-solid fa-right-long"></i>
+                                </a>
+                              </div>
+                            </div>
+
+                              <a href="#">
+                                <i class="fa-solid fa-heart"></i>
+                                <span>Add to wishlist</span>
+                              </a>
+
+                              <ul class="add-info">
+                                <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-google"></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                              </ul>
+
+                              <ul class="product">
+                                <li><a href="#">
+                                  <div class="item-product">
+                                    <i class="fa-solid fa-shield"></i>
+                                    <span>Security policy</span>
+                                  </div>
+                                  </a></li>
+                                
+                                  <li><a href="#">
+                                  <div class="item-product">
+                                    <i class="fa-solid fa-car"></i>
+                                  <span>delivery policy</span>
+                                  </div>
+                                  </a></li>
+                                
+                                  <li><a href="#">
+                                  <div class="item-product">
+                                  <i class="fa-solid fa-right-left"></i>
+                                  <span>return policy</span>
+                                  </div>
+                                  </a></li>
+                              </ul>
+                        </div>
+                    </div>
+                    <div class="out">
+                        <i class="fa-solid fa-xmark close-js"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+               
+        let amountElement = document.getElementById('amount')
+        let amount = amountElement.value;
+
+        let render = (amount) => {
+            amountElement.value = amount
+        }
+        // handle Plus
+        let handlePlus = () => {
+            amount++;
+            render(amount);
+        }
+
+        // handle Minus
+        let handleMinus = () => {
+            if(amount > 1)
+            amount--;
+            render(amount);
+        }
+
+        amountElement.addEventListener('input', () => {
+            amount = amountElement.value;
+            amount = parseInt(amount)
+            amount = (isNaN(amount) || amount == 0)?1:amount;
+            render(amount )
+        });
+
+    
+
+    </script>
+    <!-- Phần của hoàng : kết thúc-->
+
+    <script>
+       
+              
+    </script>
+              <!-- Phần của hoàng : kết thúc-->
+    
+    <!-- footer -->
+    <div class="footer-information">
+            <div class="grid footer-all">
+                <div class="row">
+                    <div class="col-3">
+                        <div class="footer-img">
+                            <img src="./access/header/img/foodsto-logo.png" alt="">
+                        </div>
+                        <div class="footer-comment">
+                            <p>
+                                Subscribe to our newsletter and get 10% off your first purchase.
+                            </p>
+                        </div>
+                        <div class="footer-icon">
+                            <a href="">
+                                <i class="fa-brands fa-square-facebook"></i>
+                            </a>
+
+                            <a href="">
+                                <i class="fa-brands fa-square-instagram"></i>
+                            </a>
+
+                              <a href="">
+                                <i class="fa-brands fa-square-twitter"></i>
+                            </a>
+
+                            <a href="">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+
+                    <div class="col-3">
+                        <div class="footer-content">
+                            <p>
+                                Link
+                            </p>
+                        </div>
+                        <div class="footer-link">
+                            <a href="">
+                                <i class="fa-solid fa-angle-right"></i> My account
+                            </a>
+                        </div>
+                        <div class="footer-link">
+                            <a href="">
+                                <i class="fa-solid fa-angle-right"></i> Checkout
+                            </a>
+                        </div>
+
+                        <div class="footer-link">
+                            <a href="">
+                                <i class="fa-solid fa-angle-right"></i> Wishlist
+                                
+                            </a>
+                        </div>
+
+                        <div class="footer-link">
+
+                            <a href="">
+                                <i class="fa-solid fa-angle-right"></i> Shopping Cart
+                            </a>
+                        </div>
+                    </div>
+
+                   
+                    <div class="col-3">
+                        <div class="footer-content">
+                            <p>
+                                Information
+                            </p>
+                        </div>
+                        <div class="footer-link">
+                            <a href="">
+                                <i class="fa-solid fa-angle-right"></i> About Us
+                            </a>
+                        </div>
+                        <div class="footer-link">
+                            <a href="">
+                                <i class="fa-solid fa-angle-right"></i> Our Team
+                            </a>
+                        </div>
+
+                        <div class="footer-link">
+                            <a href="">
+                                <i class="fa-solid fa-angle-right"></i> Contract Us
+                                
+                            </a>
+                        </div>
+
+                        <div class="footer-link">
+
+                            <a href="">
+                                <i class="fa-solid fa-angle-right"></i> Blog
+                            </a>
+                        </div>
+                    </div>
+
+
+                    <div class="col-3">
+                        <div class="footer-content">
+                            <p>
+                                Quick Contact
+                            </p>
+                        </div>
+                        <div class="footer-house">
+                                <i class="fa-solid fa-house"></i>
+                                <span>1234 North Avenue Luke Lane, South Bend, IN 360001</span>
+                        </div>
+                        <div class="footer-mail">
+                            <a href="">
+                                <i class="fa-solid fa-envelope"></i> dinhthaituan332003@gmail.com
+                            </a>
+                        </div>
+
+                        <div class="footer-phone">
+                            <a href="">
+                                <i class="fa-solid fa-phone"></i> +0934160908
+                                
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="comment"></div>
+            
+                <div class="footer-and">
+                    <div class="footer-end">
+                        <p>
+                            Copyright 2023 foodsto All Rights Reserved.
+                        </p>
+                    </div>
+            </div>
+            
+    </div>
+    </div>
+
+    
+    
+    
+</body>
+</html>

@@ -1,0 +1,14 @@
+@media screen and (max-width : 1023px){
+    .col-6 {
+        display: none;
+    }
+    .col-4 {
+        width: 100%;
+    }
+    .footer__contract {
+        left: auto;
+    }
+    .footer__contract {
+        height: 600px;
+    }
+}
