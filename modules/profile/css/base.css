@@ -21,14 +21,9 @@ html {
   
 }
 
-.open {
-    display: block;
-}
-
 .active-profile {
     background: rgba(0, 0, 0, 0.2);
-    border-radius: 4px 4px 0 0;
-    height: 45px;
+    height: 56px;
     padding: 5px;
 }
 
@@ -44,6 +39,7 @@ html {
 }
 
 .col-4 {
+    min-width: 300px;
     position: relative;
     padding: 0 15px 5px;
     width: 20%;
@@ -87,12 +83,71 @@ html {
 
 
 /* PC */
-@media screen and (min-width:1024px) {
+@media screen and (min-width:1270px) {
+    
+    .list {
+        margin-top: 4px;
+        font-size: 29px;
+    }
+    .month {
+        margin-right: 7px;
+    }
+
+    .days {
+        margin-right: 7px;
+    }
+
+    .form-nick-name {
+        justify-content: unset;
+    }
+
+    .form-nick-name .nick-name-input {
+        margin-left: 20px;
+    }
+
+    .form-name .full-name-input {
+        margin-left: 30px;
+    }
+
+    .form-name {
+        justify-content: unset;
+    }
+
+
+    .list-info__item:not() {
+        padding: 10px;
+        margin-bottom: 0;
+    }
+
+    #list {
+        display: none;
+        font-size: 29px;
+        margin-top: 4px;
+    }
+
+    .account.account-two {
+        display: flex;
+    }
+
+    .information h1 {
+        margin-left: 15px;
+    }
+
+    .col-8 {
+        width: 100%;
+    }
+
+    .col-4 {
+        display: none;
+    }
     .icon-list {
         display: none;
     }
 
     .information-all {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
         background-color: white;
     }
 
@@ -103,123 +158,41 @@ html {
 
 
 /* Mobile */
-@media only screen and (max-width:46.185em){
-    #ba {
-        display: none;
-    }
-  
-  
-    .col-4 {
-        width: 100%;
-        padding-left: 0;
-        
-    }
-
-    .click-icon {
-        padding-right: 10px;
-    }
-
-
-    .account {
-        padding-left: 14px;
-    }
-
-
-    .logo {
-        max-width: 35px;
-
-    }
-
-    .item-icon  {
-        padding-left: 20px;
-    }
-  
-    .col-8 {
-        padding-left: 5px;
-        padding-right: 5px;
-        position: absolute;
-        width: 100%;
-        overflow: hidden;
-    }
-
-    .border-right {
-        display: none;
-    }
-
-
-    .close {
-        display: none;
-    }
-
-    /* .user-information {
+@media only screen and (max-width:838px){
+    .list-info.two {
         position: relative;
-        width: 128%;
-        display: inline-block;
-        background-color: rgb(255, 255, 255);
-        padding-top: 20px;
-        margin-top: 140px;
-        display: none;
-        
-    }     */
-
- 
-
-    .information-all {
-        display: inline-flex;
-        flex-direction: column;
-        max-width: 100%;
-        border-radius: 10px;
-        margin-left: -10px;
-       
+        top: 26px;
+        right: 60px;
     }
 
-    .information-left {
-        border: none;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin: 0;
-        padding-bottom: 20px;
-
-    }
-    .information {
-        width: 100%;
+    .year {
+        margin-right: 0;
     }
 
-    .info {
-        width: 100%;
-        text-align: center;        
-    }
-
-    .info-left {
-        margin: -10px;
-    }
-
-    .form {
-        margin-left: -60px;
-    }
-
-    .user-date {
-        margin-left: -70px;
+    .date {
+        padding-left: 11px;
+        padding-right: 9px;
+        margin-right: 0;
     }
 
     .info-list {
-        margin-left: -40px;
+        text-align: start;
     }
+
+    .info-list > aside {
+        width: 100%;
+        margin-left: 11px;
+        margin-top: 50px;
+    }
+
     .information-right {
-        margin:0;
+        width: 100%;
+    }
+    .information-left {
+        width: 100%;
     }
 
-    .update {
-        margin-right: 40px;
-    }
-
-    .logo-profile {
-        width: 10%;
+    .information-all {
+        flex-wrap: wrap;
     }
 }
-
-
-
-

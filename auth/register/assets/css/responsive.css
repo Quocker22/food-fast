@@ -1,0 +1,36 @@
+@media screen and (min-width:1200px){
+    
+}
+
+@media screen and (max-width:1199px) and (min-width:46.185em){
+   
+
+    .col-5 {
+        margin: 0;
+        width: 100%;
+    }
+
+    .box-container {
+        width: 80%;
+        left: 10%;
+    }
+
+    .container-content {
+        font-size: 2rem;
+    }
+
+    .box-body span {
+        display: none;
+    }
+}
+
+@media screen and (max-width:46.185em){
+    .col-7 { 
+        display: none;
+    }
+
+    .col-5 {
+        margin: 0;
+        width: 100%;
+    }
+}

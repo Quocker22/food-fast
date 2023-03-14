@@ -38,86 +38,127 @@
 }
     
 @media (max-width:46.185em){
-  .wrapper{
-    z-index: 2;
-  }
-
-    .logo{
-        display: none;
-    }
-    .navbar{
-        position: relative;
-    }
-    .box-icon{
-        position: absolute;
-        width: 100%;
+    #aa{
         display: flex;
-        justify-content: flex-end;
-}
-
-    .navbar-menu {
-        display: none;
     }
-
-    .navbar-menu .dd_menu ul li a{
-
-        background-color: var(--primary-color);
-    
+    .header .menu {
+        padding: 12px 15px;
     }
-    
-    
-    
-    .navbar-menu > ul {
-        display: inline-block;
-        top: 50px;
-        position: absolute;
-        width: 100%;
-    }
-    .navbar-menu ul li {
-        position: relative;
-        width: 100%;
+    .icon-menu{
         display: flex;
-        flex-direction: column;
+    }
+    
+    .header .close-nav-menu > i{
+        display: block;
+    }
+
+    .header .close-nav-menu > i{
+        height: 5px;   
+        width: 15px;
+        font-size: 3.2rem;
+        color: #fff;
+        padding: 10px 15px;
+    }
+    
+
+    .header .nav-menu{
+        position: fixed;
+        display: none;
+        width: 270px;
+        height: 345px;
+        top: 0;
+        right: 0;
+        border: 3px solid   var(--primary-color);
+        border-radius: 2px;
+        overflow-y: auto;
+        background-color:#434242;
+        padding: 15px 0;
+        z-index: 99;
+        transition: all 0.5s ease;
+
+    }
+
+    .header .menu > .menu-item > .sub-menu{
+            display: none;
+            width: 100%;
+            position: relative;
+            visibility: visible;
+            background-color: transparent;
+            overflow: hidden;
+        }
+
+    .header .menu > .menu-item > .sub-menu > .menu-item > a{
+        padding: 12px 45px;
+        color: #fff;
+        border-bottom: 1px solid #333;
+    }
+    
+    .header .menu > .menu-item{
+        display: block;
+        width: 100%;
+        margin: 0px;
+    }    
+
+    .header .menu > .menu-has-children > a{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+     .header .menu > .menu-item > a{
+        color: #fff;
+        padding: 12px 15px;
+        border-bottom: 1px solid #333;
+
+    }
+
+     .header .menu > .menu-item:first-child > a{
+        border-top: 1px solid #333;
+
+    }
+
+    .header .menu > .menu-item > a .plus::before, 
+    .header .menu > .menu-item > a .plus::after{
+        border-top: 7px solid #fff;
+
+    }
+
+    .logo-food {
+        width: 100%;
+    }
+
+  
+    .logo-food img{
+        height: 30px;
+        width: 140px;
+    }
+
+    .header .icon-menu > .icon-information {
+        width: 35px;
+    }
+
+
+    /* icon */
+    .header .icon-menu > .icon-information > a {
+        display: flex;
         justify-content: center;
+        align-items: center;
     }
-    .navbar-menu ul li > a {
-        width: 100%;
-    }
-    .navbar-menu .dd_menu {
-        position: relative;
-        top: 0px;
-        left: 0;
-        display: none;
-    }
-    .navbar-menu .dd_menu ul li a{
-        width: 100%;
-        
-    }
-    .navbar-menu ul li a{
-        font-size: 18px;
-    }
-    
-    /* menu */
-    #icon-all{
-        display: none;
-    }
-    .icon-information > ul {
-        padding-left: 396px;
-        background: #c2ecdae0;
-    }
-    .icon-information ul li:last-child > a {
-        margin-right: 5px;
-    }
-   
 
+    .header .icon-menu > .icon-information > .sub-icon{
+        opacity: 1;
+        visibility: visible;
+        display: none;
+    }
 
     /* slider */
     .slider {
         display: flex;
         flex-direction: column;
-        height: 660px;
+        height: 465px;
         margin: 0;
         padding: 0;
+        position: relative;
 
     }
 
@@ -139,10 +180,11 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        top: 10%;
     }
     .slider__img img {
-      
-        margin: 0px 35px;
+        margin: 0;
+        width: 100%;
     }
     .slider__pen {
         width: 100%;
@@ -150,6 +192,43 @@
         justify-content: center;
     }
 
+    .slider-left{
+        position: absolute;
+        left: 5%;
+        bottom: 10%;
+    }
+
+    .slider-left h1{
+        font-size: 5rem;
+        line-height: 100px;
+      
+    
+    }
+
+    .slider__pen h1 {
+        font-size: 4rem;
+    }
+
+    .pen__call h1 {
+        font-size: 4rem;
+    }
+
+    .slider__display{
+        display: flex;
+        flex-direction: column;
+    }
+    .slider__photo {
+        background-size: cover;
+        width: 100%;
+        height: 55%;
+        margin-right: 0;
+    }
+
+    .slider__img {
+        width: 55%;
+        height: 100%;
+        margin-right: 0;
+    }
     /* content */
   
     .comment-two {
@@ -177,6 +256,10 @@
         justify-content: center;
     }
     
+    .logo-img {
+        margin: 0;
+    }
+
     .logo-salads {
         display: block;
         background-color: #f8f8f8;
@@ -186,19 +269,23 @@
 
     }
     .comment-one {
+        height: 1000%;
         width: 100%;
         display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
         padding: 20px;
+    
     }
-      
-    .comment-one {
-        width: 100%;
-        display: flex;
-        padding: 20px;
-    }
+  
 
     .contract-all{
         padding: 50px 10px;
+    }
+
+    .food-cate {
+        display: block;
     }
 
     .contract-food{
@@ -238,7 +325,7 @@
     } 
 
     .snack {
-        height: 400px;
+        height: 100%;
     }
 
     #list-tooltip li button {
@@ -385,3 +472,13 @@
 
 
 
+/* boyd-shopping */
+.tab-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tab-item button {
+    width: 100%;
+}
