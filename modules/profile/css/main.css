@@ -167,7 +167,7 @@
 }
 
 .information-all {
-    margin-top: 22px;
+    margin-top: 16px;
     display: flex;
     border-radius: 10px;
     background-color: white;
@@ -509,4 +509,9 @@
 
 .main {
     margin-top: 80px;
+}
+
+.info {
+    margin-left: 17px;
+    line-height: 89px;
 }

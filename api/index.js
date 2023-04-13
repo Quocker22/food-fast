@@ -1,3 +1,6 @@
+const query = 'limit=100&page=1';
+
+
 //api register
 function getDataFromInputRegister() {
   const fullName = document.querySelector(".register-name");
@@ -13,7 +16,6 @@ function getDataFromInputRegister() {
     password: password.value,
     phone: phone.value,
   };
-
   localStorage.clear("food-token");
   callApiRegister(dataRegister);
 }
@@ -47,12 +49,13 @@ function getDataFromInputLogin() {
 
 async function callApiLogin(dataLogin) {
   try {
-    const { data } = await axios.post(
+    const data = await axios.post(
       "https://food-api.huytx.com/api/v1/user/sign-in",
       dataLogin
     );
-    localStorage.setItem("food-token", data.data.token);
+    localStorage.setItem("food-token", data.data.data.token);
     window.location.href = "/index.html";
+
   } catch (e) {
     const login__report = document.querySelector(".login-error");
     login__report.innerHTML = e.response.data.message;
@@ -60,8 +63,8 @@ async function callApiLogin(dataLogin) {
   }
 } 
 
-
 //api get user
+
 async function getUser() {
   try {
     let token = localStorage.getItem("food-token");
@@ -69,20 +72,22 @@ async function getUser() {
       "https://food-api.huytx.com/api/v1/user/profile",
       { headers: { Authorization: `Bearer ${token}` } }
     );
+
     return data.data;
+  
   } catch (e) {
-    e.response.data.code === 401 && (window.location.href = "/auth/login.html");
+    // e.response.data.code === 401 && (window.location.href = "/auth/login.html");
   }
 }
 
 // api hoa qua
-
-async function getCateList() {
+const cateLimit = 'limit=3&page=1';
+async function getCateList(cateLimit) {
   try {
-    const data = await axios.get("https://food-api.huytx.com/api/v1/cate/list");
+    const data = await axios.get(`https://food-api.huytx.com/api/v1/cate/list?${cateLimit}`);
     return data.data;
-  } catch (e) {
-    console.log(e);
+  }catch (e) {
+    console.log(e)    
   }
 }
 
@@ -104,7 +109,9 @@ async function listCate() {
   // Gọi listFood với ID danh mục đầu tiên theo mặc định
   listFood(cates.data[0].cateId);
 }
+
 listCate();
+//////////////////////////////////////////////////////////////////////////////////
 
 async function handleChangeCate() {
   const tabs = document.querySelectorAll(".tab-item");
@@ -121,18 +128,10 @@ async function handleChangeCate() {
   })
 }
 
-
-
-
-
-    
-
-
-
 // api get food list
-async function getListFood() {
+async function getListFood(query) {
   try {
-    const data = await axios.get("https://food-api.huytx.com/api/v1/food/list");
+    const data = await axios.get(`https://food-api.huytx.com/api/v1/food/list?${query}`);
     return data.data;
   } catch (e) {
     console.log(e);
@@ -143,7 +142,7 @@ async function getListFood() {
 const ITEMS_PER_PAGE = 8;
 
 async function listFood(cateID, currentPage = 1) {
-  const foods = await getListFood();
+  const foods = await getListFood(query);
   const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
   const endIndex = startIndex + ITEMS_PER_PAGE;
   const filteredFoods = foods.data.filter((food) => food.cateId === cateID);
@@ -160,7 +159,7 @@ async function listFood(cateID, currentPage = 1) {
         <img src="${food.images[0].imageUrl}" alt="HÌNH ẢNH" class="snack ">
         <div class="menu-breakfast__icon">
           <h6 class="name">${food.description}</h6>
-          <a class="price" href="">${food.foodName}</a>
+          <p class="price" href="">${food.foodName}</p>
           <div class="sell-and-check">
             <span>${food.price}</span>
             <div class="icon-start">
@@ -172,7 +171,7 @@ async function listFood(cateID, currentPage = 1) {
             </div>
           </div>
           <div class="link-cart">
-            <button>ADD TO CART
+            <button id=${food.foodId} onclick="myfuction(event)" >ADD TO CART
               <i class="fa-sharp fa-solid fa-right-long"></i>
             </button>
             <div class="item-action">
@@ -191,7 +190,7 @@ async function listFood(cateID, currentPage = 1) {
 
   // open pseudo 
   
-
+// phân trang
   // Add pagination buttons
   const paginationContainer = document.querySelector(".pagination");
   paginationContainer.innerHTML = "";
@@ -218,12 +217,11 @@ async function listFood(cateID, currentPage = 1) {
 
 
 
-// eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiI4YmYwZWZkOS1kODAxLTQ2YzctOThkMy0xNWEwNjM0M2M0MWMiLCJSb2xlIjoiTUVNQkVSIiwiZXhwIjoxNjc3NTEyMzc5fQ.61ixRdcPx6vGlRNnwH6tHZUfDW37ScDhxKuFcf7-KbU
 
 // phần của tuấn 
 
 async function nameCate() {
-  const cates = await getCateList();
+  const cates = await getCateList(cateLimit);
   const getNameFood = document.querySelector(".food-cate");
   await cates.data.map((cate, index) => {
       const getName = document.createElement("div");
@@ -250,11 +248,92 @@ async function nameCate() {
                         </a>
                     </div>
       `;
-
       getNameFood.appendChild(getName)
   })
 
 }
 nameCate();
+
+// list-menu2
+const cate_2 = 'limit=1&page=1'
+async function nameCate_2() {
+  const cates_list = await getCateList(cate_2);
+  const getNameFoods = document.querySelector(".organic-list-id");
+  await cates_list .data.map((cate, index) => {
+      const getNames = document.createElement("div");
+      getNames.className = "img-organic";
+      getNames.innerHTML = `
+      <img src="${cate.cateImage}" alt="">
+      <div class="organic-button">
+           <div class="name-organic">
+              <div class="name-list">
+                  <h1>  ${cate.cateName}</h1>
+                  <h2>100% Organic</h2>
+              </div>
+               <button class="organic-item">
+                  <div class="organic-list">
+                      <span class="shop-organic">s</span>
+                      <span class="shop-organic">h</span>
+                      <span class="shop-organic">o</span>
+                      <span class="shop-organic">p</span>
+                  </div>
+                  <div class="organic-list_item">
+                      <span class="shop-now">n</span>
+                      <span class="shop-now">o</span>
+                      <span class="shop-now">w</span>
+                  </div>
+                   <i class="fa-solid fa-arrow-right-long"></i>
+               </button>
+           </div>
+      </div>
+      `;
+      getNameFoods.appendChild(getNames)
+  })
+
+}
+nameCate_2();
+
+
+
+// list-menu-cate
+const  limit = 'limit=6&page=1'
+async function listCateFood() {
+  const foods = await getListFood(limit);
+  const getFoodList = document.querySelector(".navba-menu-list");  // lấy thẻ class chứa tát các thẻ
+  await foods.data.map((food, index) => {  // chuyền food vào
+      const getNameList = document.createElement("div"); // thấy thẻ div
+      getNameList.className = "navba-menu"; // lấy thẻ cha các thẻ
+      getNameList.innerHTML = `
+      <a href="#" class="navba-list-menu">
+      <div class="list-menu-img">
+          <img src="${food.images[0].imageUrl}" alt="">  
+      </div>
+      <div class="list-menu-nav">
+          <div class="list-h1">
+              <span>${food.foodName}</span>
+          </div>
+           <div class="navba-menu-icon">
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i> 
+
+           </div>
+           <div class="list-money">
+              <span>${food.price}</span>
+           </div>
+      </div>
+  </a>
+      `;
+      getFoodList.appendChild(getNameList)
+  })
+
+}
+listCateFood();
+
+
+
+
 
 

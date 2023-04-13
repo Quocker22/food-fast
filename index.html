@@ -13,15 +13,63 @@
     <link rel="stylesheet" href="./access/header/css/reponsive.css">
     <link rel="stylesheet" href="./access/img/">
     <link rel="stylesheet" href="./access/header/css/reponsive.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://kit.fontawesome.com/e1e4658b74.js" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.0/axios.min.js"
-        integrity="sha512-OdkysyYNjK4CZHgB+dkw9xQp66hZ9TLqmS2vXaBrftfyJeduVhyy1cOfoxiKdi4/bfgpco6REu6Rb+V2oVIRWg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./api/index.js"></script>
     <script src="./access/header/css/dropdown.js"></script>
     <link rel="stylesheet" href="./auth/login.html">
+    <link rel="stylesheet" href="./modules/profile/profile.html">
     <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+    <script src="./cartanddialog.js"></script>
+    
 <body>
+
+    <!--cartlist-->
+    <div class="cart">
+        <i class="fa-solid fa-xmark" style="font-size: 30px;cursor: pointer;" onclick="document.querySelector('.cart').style.right = '-100%'"></i>
+        <div class="noContent">
+            <h1>Không có sản phẩm</h1>
+        </div>
+        <div class="list">
+            <h2>Cart</h2>
+       <table>
+            <thead>
+                <tr>
+                <th>Product</th>
+                <th>Price</th>
+                <th>Select</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
+        <div class="price-total">
+            <p style="text-align: right;font-weight:bold;">Subtatal:<span>0</span><sup>đ</sup> </p>
+        </div>
+        <button>Checkout
+
+        </button>
+        </div>
+        
+    </div>
+
+    <!--dialog-->
+    
+    <dialog id="dialog">
+        <div class="icon">
+            <i class="fa-solid fa-check"></i>
+        </div>
+        <h1 id="added_to_cart">Added to cart!</h1>
+        <p style="font-size: 30px;width: 100%;text-align: center;margin-bottom: 16px;color: #545454;">chuối</p>
+            <div class="two-button" style="display: flex;justify-content: center;">
+                <button id = "Continue_shopping" onclick = "closeDiaLog()" >Continue shopping</button>
+                <button id="checkout" onclick="{document.querySelector('.cart').style.right = '0%';closeDiaLog()}">Checkout</button>
+            </div>
+        <!-- <div class="result"></div> -->
+    </dialog>
+
+      
     <!-- box-body -->
     <!-- header -->
     <header class="header">
@@ -38,7 +86,7 @@
                     <i class="fa-solid fa-xmark"></i>
                 </div>
                  <ul class="menu">
-                    <li class="menu-item menu-has-children">
+                    <li class="menu-item menu-has-children ">
                         <a href="#" class="menu-children" >HOME <i class="plus"></i></a>
                         <ul class="sub-menu">
                             <li class="menu-item"><a href="#">Home Main</a></li>
@@ -100,88 +148,31 @@
                 <ul class="icon-menu">
                     <li class="icon-information icon-repon" onclick="iconMenu()"><a href="#"><i class="fa-solid fa-user"></i></a>
                         <ul class="sub-icon">
-                            <li class="icon-item"><a class="profile" href="./modules/profile/profile.html">Thông Tin Cá Nhân</a></li>
+                            <li class="icon-item"><a class="profile" href="/modules/profile/profile.html">Thông Tin Cá Nhân</a></li>
                             <li class="icon-item"><a href="./auth/login.html">Đăng Xuất</a></li>
                         </ul>
                     </li>
                     <li class="icon-information icon-repon"><a href="#"><i class="fa-solid fa-heart"></i></a>
                         
-                    <li class="icon-information icon-repon"><a href="#"><i class="fa-sharp fa-solid fa-cart-shopping"></i></a>
+                    <li class="icon-information icon-repon" onclick=checkCartProduct()><a ><i class="fa-sharp fa-solid fa-cart-shopping" style="position: relative;">
+                        <span class="cart-notice">0</span>
+                    </i></a>
                       
                    </li>
-                    <li class="icon-information icon-repon"><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                    <li class="icon-information icofn-repon"><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
                     </li>
 
                     <li id="aa"  class="icon-information icon-repon" onclick="menus()" >
                             <i class="fa-solid fa-bars"></i>
                     </li>
                 </ul>
-               </nav>
+            </div>
+                
             </div>
         </div>
     </header>
 
-    <script>
-            // thanh cuon header
-    window.onscroll = function(){
-        var header =document.getElementById('ba');
-        if (document.documentElement.scrollTop > 100 || document.body.scrollTop >100){
-        header.style.position ='fixed';
-        header.style.left = 0;
-        header.style.right = 0;
-        header.style.background  ='#fff';
-        header.style.zIndex = 9;
-    } else {
-        header.style.position ='relative';
-    }
-}
-// API profile
-    getValue();
-        async function getValue(){
-        let data = await getUser();
-
-        const getName = document.querySelector('.profile')
-        getName.innerHTML = data.data.fullName;
-        } 
-
-
-     var menu = document.querySelector('.nav-menu')
-     function menus(){
-        if(menu.style.display === "block"){
-            menu.style.display = "none"
-        } else {
-            menu.style.display = "block"
-        }
-     }
-
-      var close = document.querySelector('.nav-menu');
-      function closes(){
-        if (close.style.display === "block"){
-            close.style.display ="none"
-        } else {
-            close.style.display = "block"
-        }
-      }
-
-      var icon = document.querySelector('.sub-icon');
-      function iconMenu(){
-        if (icon.style.display === "block"){
-            icon.style.display = "none"            
-        } else {
-            icon.style.display = "block"
-            icon.style.transform = "translateY(0px)"
-           
-        }
-      }
-
-      $(document).ready(function(){
-        $('.menu-children').click(function(){
-            $(this).next('.sub-menu').slideToggle();
-        })
-      })
-
-    </script>
-
+    
     <!-- slider -->
     <div class="slider">
         <div class="slider__display">
@@ -193,7 +184,7 @@
                 <div class="pen__call"><h1>Shopping</h1></div>
                 <div class="slider__pencel"><p>It is a long established fact that a reader will be the readable content of page</p></div>
                 <div class="slider__view">
-                    <a href="" class="slider__more">VIEW MORE</a>
+                    <a href="./access/CategoryList/index.html" class="slider__more">VIEW MORE</a>
                     <i class="fa-solid fa-right-long"></i>
                 </div>
             </div>
@@ -243,104 +234,7 @@
     
 
     
-    <script>
-        // thanh cuon header
-        window.onscroll = function(){
-            var header =document.getElementById('ba');
-            if (document.documentElement.scrollTop > 100 || document.body.scrollTop >100){
-            header.style.position ='fixed';
-            header.style.left = 0;
-            header.style.right = 0;
-            header.style.backgroundColor  ='#b5e8d0';
-            header.style.zIndex = 9;
-        } else {
-            header.style.position ='relative';
-        }
-    }
-        // click menu
-        const a_parent = document.querySelectorAll(".a_parent");
-    
-        a_parent.forEach(function(a_parent_item){
-            a_parent_item.addEventListener("click" , function(){
-                a_parent_item.classList.add("active");
-            })
-        })
 
-        
-        a_parent.forEach(function(a_parent_item){
-            
-            a_parent_item.addEventListener("blur", function(){
-                a_parent_item.classList.remove("active")
-        });
-        })
-
-
-    
-        // // click icon
-        jQuery.fn.extend({
-        setMenu:function () {
-        return this.each(function() {
-            var containerMenu = $(this);
-
-            var itemMenu = containerMenu.find('.page');
-            itemMenu.click(function () {
-                var subMenuitem = containerMenu.find('.dd_menu_two');
-                subMenuitem.slideToggle(500);
-
-            });
-
-            $(document).click(function (e) {
-                if (!containerMenu.is(e.target) &&
-                    containerMenu.has(e.target).length === 0) {
-                     var isOpened =
-                        containerMenu.find('.dd_menu_two').css("display");
-
-                     if (isOpened == 'block') {
-                         containerMenu.find('.dd_menu_two').slideToggle(500);
-                     }
-                }
-            });
-        });
-    },
-});
-
-
-$('.icon-information').setMenu();
-
-// icon-menu
-jQuery.fn.extend({
-        setMenu:function () {
-        return this.each(function() {
-            var containerMenu = $(this);
-
-            var itemMenu = containerMenu.find('#icon-menu');
-            itemMenu.click(function () {
-                var subMenuitem = containerMenu.find('.navbar-menu');
-                subMenuitem.slideToggle(500);
-
-            });
-
-            $(document).click(function (e) {
-                if (!containerMenu.is(e.target) &&
-                    containerMenu.has(e.target).length === 0) {
-                     var isOpened =
-                        containerMenu.find('.navbar-menu').css("display");
-
-                     if (isOpened == 'none') {
-                         containerMenu.find('.navbar-menu').slideToggle(500);
-                     }
-                }
-            });
-        });
-    },
-});
-
-
-$('.wrapper').setMenu();
-
-  
-     
-    </script>
 
  
     <!-- logo -->
@@ -363,7 +257,6 @@ $('.wrapper').setMenu();
                     <div class="pagination">
                     </div>
                 <i class="fa-solid fa-angle-right"></i>
-                
             </div>
         </div>
             
@@ -451,100 +344,163 @@ $('.wrapper').setMenu();
 
     <!-- Phần của hoàng : kết thúc-->
 
-              <!-- Phần của hoàng : kết thúc-->
+    <!-- List menu  -->
+        <div class="list-menu">
+            <div class="name-naturally">
+                <div class="organic-product">
+                    <div class="naturally">
+                        <h1>NATURALLY</h1>
+                    </div>
+                    <div class="organic">
+                        <p>No Chemicals,& No Pesticides</p>
+                        <h3>Fresh Organic Products</h3>
+                    </div>
+             </div>
+
+                <div class="grid">
+                    <div class="row">
+                        <div class="c-4">
+                                <div class="organic-list-id">
+                            </div>
+                        </div>
+
+                        <div class="c-8">
+                            <div class="list-menu-item">
+                                <div class="list-nav-memnu">
+                                    <div class="navba-menu-list">
+                                        <div class="navba-menu">
+                                           
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- sale up -->
+        <div class="sale-food">
+            <div class="sale-up">
+                <div class="sale-up-img">
+                    <div class="sale-img">
+                        <img id="sale-img-food" src="./access/header/img/sale-up3.png" alt="">
+                    
+                    <div class="sale-up-content">
+                        <p>Weekend Offer</p>
+                        <h1>Organic Foods Up To 50% off</h1>
+                        <button class="sale-button">
+                            <div class="sale-shop-now">
+                                <span class="shop-iq">  S </span>
+                                <span class="shop-iq">  h </span>
+                                <span class="shop-iq">  o </span>
+                                <span class="shop-iq">  p </span>
+                            </div>
+                            <div class="sale-up-now">
+                                <span class="now-ip">  n </span>
+                                <span class="now-ip">  o </span>
+                                <span class="now-ip">  w </span>
+                            </div>
+                            <i class="fa-solid fa-arrow-right-long"></i>
+                        </button>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+      
+
     
     <!-- footer -->
     <div class="footer-information">
-            <div class="grid footer-all">
-                <div class="row">
-                    <div class="col-3">
-                        <div class="footer-img"><img src="./access/header/img/foodsto-logo.png" alt=""> </div>
-                        <div class="footer-comment">
-                            <p>Subscribe to our newsletter and get 10% off your first purchase.</p>
-                        </div>
-                        <div class="footer-icon">
-                            <a href=""> <i class="fa-brands fa-square-facebook"></i></a>
-
-                            <a href=""><i class="fa-brands fa-square-instagram"></i></a>
-
-                            <a href=""> <i class="fa-brands fa-square-twitter"></i></a>
-
-                            <a href=""><i class="fa-brands fa-linkedin"></i> </a>
-                        </div>
+        <div class="grid footer-all">
+            <div class="raw">
+                <div class="col-3">
+                    <div class="footer-img"><img src="./access/header/img/foodsto-logo.png" alt=""> </div>
+                    <div class="footer-comment">
+                        <p>Subscribe to our newsletter and get 10% off your first purchase.</p>
                     </div>
-                    
+                    <div class="footer-icon">
+                        <a href=""> <i class="fa-brands fa-square-facebook"></i></a>
 
-                    <div class="col-3">
-                        <div class="footer-content"> <p> Link </p> </div>
-                        <div class="footer-link">
-                            <a href=""> <i class="fa-solid fa-angle-right"></i> My account</a>
-                        </div>
-                        <div class="footer-link">
-                            <a href=""><i class="fa-solid fa-angle-right"></i> Checkout </a>
-                        </div>
+                        <a href=""><i class="fa-brands fa-square-instagram"></i></a>
 
-                        <div class="footer-link">
-                            <a href=""><i class="fa-solid fa-angle-right"></i> Wishlist </a>
-                        </div>
+                        <a href=""> <i class="fa-brands fa-square-twitter"></i></a>
 
-                        <div class="footer-link">
-                            <a href=""><i class="fa-solid fa-angle-right"></i> Shopping Cart </a>
-                        </div>
-                    </div>
-
-                   
-                    <div class="col-3">
-                        <div class="footer-content">
-                            <p>  Information </p>
-                        </div>
-                        <div class="footer-link">
-                            <a href="">  <i class="fa-solid fa-angle-right"></i> About Us </a>
-                        </div>
-                        <div class="footer-link">
-                            <a href="">   <i class="fa-solid fa-angle-right"></i> Our Team  </a>
-                        </div>
-
-                        <div class="footer-link">
-                            <a href=""> <i class="fa-solid fa-angle-right"></i> Contract Us </a>
-                        </div>
-
-                        <div class="footer-link">
-                            <a href="">   <i class="fa-solid fa-angle-right"></i> Blog </a>
-                        </div>
-                    </div>
-
-
-                    <div class="col-3">
-                        <div class="footer-content">
-                            <p>
-                                Quick Contact
-                            </p>
-                        </div>
-                        <div class="footer-house">
-                                <i class="fa-solid fa-house"></i>
-                                <span>1234 North Avenue Luke Lane, South Bend, IN 360001</span>
-                        </div>
-                        <div class="footer-mail">
-                            <a href=""> <i class="fa-solid fa-envelope"></i> dinhthaituan332003@gmail.com </a>
-                        </div>
-
-                        <div class="footer-phone">
-                            <a href="">   <i class="fa-solid fa-phone"></i>(84+) +0934160908 </a>
-                        </div>
+                        <a href=""><i class="fa-brands fa-linkedin"></i> </a>
                     </div>
                 </div>
-                <div class="comment"></div>
-            
-                <div class="footer-and">
-                    <div class="footer-end"> <p> Copyright 2023 foodsto All Rights Reserved.</p> </div>
-                </div>
-            
-    </div>
-    </div>
+             <div class="col-3">
+                    <div class="footer-content"> <p> Link </p> </div>
+                    <div class="footer-link">
+                        <a href=""> <i class="fa-solid fa-angle-right"></i> My account</a>
+                    </div>
+                    <div class="footer-link">
+                        <a href=""><i class="fa-solid fa-angle-right"></i> Checkout </a>
+                    </div>
 
-    
-    
-    
+                    <div class="footer-link">
+                        <a href=""><i class="fa-solid fa-angle-right"></i> Wishlist </a>
+                    </div>
+
+                    <div class="footer-link">
+                        <a href=""><i class="fa-solid fa-angle-right"></i> Shopping Cart </a>
+                    </div>
+                </div>
+
+               
+                <div class="col-3">
+                    <div class="footer-content">
+                        <p>  Information </p>
+                    </div>
+                    <div class="footer-link">
+                        <a href="">  <i class="fa-solid fa-angle-right"></i> About Us </a>
+                    </div>
+                    <div class="footer-link">
+                        <a href="">   <i class="fa-solid fa-angle-right"></i> Our Team  </a>
+                    </div>
+
+                    <div class="footer-link">
+                        <a href=""> <i class="fa-solid fa-angle-right"></i> Contract Us </a>
+                    </div>
+
+                    <div class="footer-link">
+                        <a href="">   <i class="fa-solid fa-angle-right"></i> Blog </a>
+                    </div>
+                </div>
+
+
+                <div class="col-3">
+                    <div class="footer-content">
+                        <p>
+                            Quick Contact
+                        </p>
+                    </div>
+                    <div class="footer-house">
+                            <i class="fa-solid fa-house"></i>
+                            <span>1234 North Avenue Luke Lane, South Bend, IN 360001</span>
+                    </div>
+                    <div class="footer-mail">
+                        <a href=""> <i class="fa-solid fa-envelope"></i> dinhthaituan332003@gmail.com </a>
+                    </div>
+
+                    <div class="footer-phone">
+                        <a href="">   <i class="fa-solid fa-phone"></i>(84+) +0934160908 </a>
+                    </div>
+                </div>
+            </div>
+            <div class="comment"></div>
+        
+            <div class="footer-and">
+                <div class="footer-end"> <p> Copyright 2023 foodsto All Rights Reserved.</p> </div>
+            </div>
+       
+</div>
+</div>   
+
+<script src="./access/header/css/main.js"></script>
 </body>
 
 </html>

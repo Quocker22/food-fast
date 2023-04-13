@@ -92,7 +92,7 @@ body {
 .box-container {
     background-color: #fff;
     position: absolute;
-    width: 380px;
+    width: 75%;
     height: 90%;
     border-radius: 10px;
 }
@@ -331,6 +331,8 @@ body {
     
 }
 
+
+
 .remember span {
     font-size: 1.4rem;
     font-weight: 100;
@@ -438,6 +440,35 @@ body {
 .google span {
     color: white;
 }
-
+input[type=checkbox] {
+    position: relative;
+      cursor: pointer;
+}
+input[type=checkbox]:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    top: 0px;
+    left: 0;
+    border: 1px solid #555555;
+    border-radius: px;
+    background-color: white;
+}
+input[type=checkbox]:checked:after {
+    content: "";
+    display: block;
+    width: 3px;
+    height: 8px;
+    border: solid #fab55d;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    top: 2px;
+    left: 6px;
+}
 
 

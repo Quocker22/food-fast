@@ -1,14 +1,271 @@
 @media screen and (max-width : 1023px){
-    .col-6 {
+    .col-7 {
         display: none;
     }
-    .col-4 {
+
+    .col-5 {
         width: 100%;
     }
-    .footer__contract {
-        left: auto;
+}
+
+
+@media screen and (max-width:1024px) and (min-width:46.185em){
+   
+    .col-7 { 
+        display: none;
     }
-    .footer__contract {
-        height: 600px;
+    .col-5 {
+        margin: 0;
+        width: 100%;
+    }
+
+    .box-container {
+        width: 80%;
+        height: 1200px;
+    }
+
+    .container-content {
+        padding: 0 50px;
+       
+    }
+
+    .login-up--box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .container-content {
+        font-size: 2rem;
+    }
+
+    .box-body span {
+        display: none;
+    }
+    .img-logo{
+        background-size: 100% 100%;
+    }
+    .login-up__text {
+       
+        margin: 50px;
+    }
+
+    .login-up__text h1 {
+        font-size: 5rem;
+    }
+    .login-up__text p {
+        font-size: 2.6rem;
+        display: flex;
+    }
+
+    .forms-login h6 {
+        font-size: 2.4rem;
+        padding-bottom: 12px;
+        padding-top: 12px;
+    }
+
+    .form-input {
+      
+        height: 80px;
+        width: 100%;
+    }
+
+    .form-input i {
+        padding: 0;
+        width: 86px;
+        color: #fff;
+        font-size: 2.5rem;
+        height: 100%;
+        background-color: var(--primary-color);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+}
+
+    .form-input input {
+        padding: 0 2.8rem;
+        border: transparent;
+        outline: none;
+        width: 100%;
+        height: 100%;
+        font-size: 2.5rem;
+    }
+
+    .remember span {
+        font-size: 3rem;
+    }
+
+    input[type=checkbox] {
+        position: relative;
+        cursor: pointer;
+        width: 30px;
+        height: 40px;
+    }
+
+    input[type=checkbox]:before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        top: 4px;
+        left: 0;
+        border: 1px solid #555555;
+        border-radius: 0px;
+        background-color: white;
+    }
+
+    input[type=checkbox]:checked:after {
+        content: "";
+        display: block;
+        width: 10px;
+        height: 20px;
+        border: solid #fab55d;
+        border-width: 0px 3px 3px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+        position: absolute;
+        top: 4px;
+        left: 10px;
+    }
+
+    .remember-forgot {
+      
+        margin-top: 30px;
+    }
+
+    .forgot a {
+        font-size: 2.5rem;
+       
+    }
+
+    .enter{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 25px;
+    }
+
+    .enter button {
+        width: 85%;
+        height: 90px;
+        display: flex;
+        padding: 10px;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--primary-color);
+        border: 1px solid var(--primary-color);
+        color: white;
+        cursor: pointer;
+        margin: 15px 0;
+        font-size: 3rem;
+        border-radius: 5px;
+    }
+
+    .will-changes::before {
+        content: "";
+        position: absolute;
+        top: 52%;
+        left: -32%;
+        width: 245%;
+        right: 0;
+        height: 1px;
+        background: #23396726;
+    }
+
+    .will-changes p {
+        background: #fff;
+        z-index: 1;
+        width: 100%;
+        margin-left: 34px;
+        font-size: 2rem;
+        left: 10;
+        display: flex;
+        align-items: center;
+        position: relative;
+        padding: 0px 57px;
+        left: 35%;
+        justify-content: center;
+    }
+
+    .will-changes {
+        margin-top: 40px;
+    }
+
+    .changes-btn {
+
+        margin: 4.5rem 0;
+    }
+
+    .facebook {
+        width: 25%;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .facebook span {
+        font-size: 2rem;
+        padding-left: 10px;
+    }
+
+    .facebook i {
+        font-size: 2rem;
+        padding-left: 10px;
+    }
+
+    .twitter{
+        width: 25%;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .twitter span {
+        font-size: 2rem;
+        padding-left: 10px;
+    }
+
+    .twitter i {
+        font-size: 2rem;
+        padding-left: 10px;
+    }
+
+    .google{
+        width: 25%;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .google span {
+        font-size: 2rem;
+        padding-left: 10px;
+    }
+
+    .google i {
+        font-size: 2rem;
+        padding-left: 10px;
+    }
+
+    .accept-register span {
+        font-size: 2.7rem;
+      
+    }
+
+    /* register */
+    .forms-register h6 {
+        font-size: 2.4rem;
+        padding: 10px;
+       
+    }
+
+    .accept-register {
+       
+        margin: 30px 0;
     }
 }

@@ -83,7 +83,22 @@ html {
 
 
 /* PC */
-@media screen and (min-width:1270px) {
+@media screen and (max-width:1270px) {
+    .information-all{
+        
+        flex-wrap: wrap;
+    }
+    .information-right {
+        width: 450px;
+    }
+
+    .information-left {
+        width: 450px;
+    }
+    
+    .handle-right .account.account-two {
+        display: none ;
+    }
     
     .list {
         margin-top: 4px;
@@ -125,9 +140,6 @@ html {
         margin-top: 4px;
     }
 
-    .account.account-two {
-        display: flex;
-    }
 
     .information h1 {
         margin-left: 15px;
@@ -137,9 +149,6 @@ html {
         width: 100%;
     }
 
-    .col-4 {
-        display: none;
-    }
     .icon-list {
         display: none;
     }
@@ -157,8 +166,64 @@ html {
 }
 
 
+@media screen and (max-width:1233px) {
+    
+    .social-network {
+        padding-top: 10px;
+    }
+    .password-pin{
+        padding-top: 10px;
+    }
+    .phone-email {
+        padding-top: 10px;
+    }
+
+
+    .info-list {
+        padding-bottom: 0;
+        padding-left: 27px;
+        justify-content: flex-start;
+    }
+
+    .information-right {
+        margin-left: 0;
+        padding: 0 30px;
+        width: 100%;
+    }
+
+    .information-left {
+        width: 100%;
+    }
+    
+}
+
 /* Mobile */
 @media only screen and (max-width:838px){
+    .info {
+        height: 52px;
+        margin-left: 17px;
+        line-height: 73px;
+    }
+
+    .information-all {
+        margin-top: 0;
+    }
+
+    .account.account-two {
+        display: flex;
+    }
+    
+    .col-8 .handle-right .account.account-two {
+        display: flex;
+    }
+    .handle-right .account.account-two {
+        display: block ;
+    }
+
+    .col-4 {
+        display: none;
+    }
+    
     .list-info.two {
         position: relative;
         top: 26px;

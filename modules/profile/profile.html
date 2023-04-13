@@ -9,6 +9,9 @@
 <link rel="stylesheet" href="../../access/header/css/basse.css">
 <link rel="stylesheet" href="../../access/header/css/reponsive.css">
 <script src="../../api/index.js"></script>
+<link rel="stylesheet" href="../../auth/login.html">
+<link rel="stylesheet" href="../../index.html">
+<link rel="stylesheet" href="./profile.html">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <body>
@@ -88,8 +91,8 @@
                 <ul class="icon-menu">
                     <li class="icon-information icon-repon" onclick="iconMenu()"><a href="#"><i class="fa-solid fa-user"></i></a>
                         <ul class="sub-icon">
-                            <li class="icon-item"><a class="profile" href="./modules/profile/profile.html">Thông Tin Cá Nhân</a></li>
-                            <li class="icon-item"><a href="./auth/login.html">Đăng Xuất</a></li>
+                            <li class="icon-item"><a class="profile" href="/modules/profile/profile.html">Thông Tin Cá Nhân</a></li>
+                            <li class="icon-item"><a href="/auth/login.html">Đăng Xuất</a></li>
                         </ul>
                     </li>
                     <li class="icon-information icon-repon"><a href="#"><i class="fa-solid fa-heart"></i></a>
@@ -234,8 +237,7 @@
                 </div>
 
                 <div class="col-8">
-                    <!-- Thông tin tài khoản -->
-                    <div class="handle-right open">
+                    <div class="two-current">
                         <div class="account account-two">
                             <div class="account__name-logo">
                                 <div class="list">
@@ -285,10 +287,10 @@
                                             <li class="list-info__item">
                                                 <a href="#" class="list-info__item-link">
                                                     <div class="left">
-
+    
                                                         <i class="fa-solid fa-money-check"></i>
                                                         <span>Thanh Toán</span>
-
+    
                                                     </div>
                                                     <i class="fa-solid fa-arrow-right"></i>
                                                 </a>
@@ -297,10 +299,10 @@
                                             <li class="list-info__item">
                                                 <a href="#" class="list-info__item-link">
                                                     <div class="left">
-
+    
                                                         <i class="fa-solid fa-location-dot"></i>
                                                         <span>Địa chỉ</span>
-
+    
                                                     </div>
                                                     <i class="fa-solid fa-arrow-right"></i>
                                                 </a>
@@ -309,10 +311,10 @@
                                             <li class="list-info__item">
                                                 <a href="#" class="list-info__item-link">
                                                     <div class="left">
-
+    
                                                         <i class="fa-solid fa-check"></i>
                                                         <span>Đánh giá</span>
-
+    
                                                     </div>
                                                     <i class="fa-solid fa-arrow-right"></i>
                                                 </a>
@@ -321,10 +323,10 @@
                                             <li class="list-info__item">
                                                 <a href="#" class="list-info__item-link">
                                                     <div class="left">
-
+    
                                                         <i class="fa-solid fa-eye"></i>
                                                         <span>Đã xem</span>
-
+    
                                                     </div>
                                                     <i class="fa-solid fa-arrow-right"></i>
                                                 </a>
@@ -333,10 +335,10 @@
                                             <li class="list-info__item">
                                                 <a href="#" class="list-info__item-link">
                                                     <div class="left">
-
+    
                                                         <i class="fa-solid fa-heart"></i>
                                                         <span>Yêu thích</span>
-
+    
                                                     </div>
                                                     <i class="fa-solid fa-arrow-right"></i>
                                                 </a>
@@ -352,9 +354,17 @@
                                     <p class="user-name">USER NAME</p>
                                 </div>
                             </div>
-                        </div>
+                    </div>
+                        <h1 class="info">THÔNG TIN TÀI KHOẢN</h1>
+                    
+                        
+                    </div>
+
+                    <!-- Thông tin tài khoản -->
+                    <div class="handle-right open">
+                        
                         <div class="information ">
-                            <h1 class="info">THÔNG TIN TÀI KHOẢN</h1>
+                            
                             <a href="../../index.html" class="close">
 
                             </a>
@@ -855,11 +865,39 @@
             phoneNumber.innerHTML = data.data.phone
             emailAddress.innerHTML = data.data.email
         }
-
-
-
+ 
+    // click mở menu
+    var menu = document.querySelector('.nav-menu')
+     function menus(){
+        if(menu.style.display === "block"){
+            menu.style.display = "none"
+        } else {
+            menu.style.display = "block"
+        }
+     }
+    //  click tắt menu
+      var close = document.querySelector('.nav-menu');
+      function closes(){
+        if (close.style.display === "block"){
+            close.style.display ="none"
+        } else {
+            close.style.display = "block"
+        }
+      }
+    //   click mở menu icon
+      var icon = document.querySelector('.sub-icon');
+      function iconMenu(){
+        if (icon.style.display === "block"){
+            icon.style.display = "none"            
+        } else {
+            icon.style.display = "block"
+            icon.style.transform = "translateY(0px)"
+           
+        }
+      }
+  
     </script>
 
-    <script src="../profile/js/tue.js"></script>
+    <script src="./js/profile.js"></script>
 
 </body>

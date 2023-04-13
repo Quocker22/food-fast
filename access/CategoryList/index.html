@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../header/css/Main.css">
+    <script src="https://kit.fontawesome.com/e1e4658b74.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="../../access/header/css/basse.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="../../cartanddialog.js"></script>
+    <link rel="stylesheet" href="../header/css/basse.css">
+    <link rel="stylesheet" href="../header/css/Main.css">
+    <link rel="stylesheet" href="../header/css/reponsive.css">
+    <script src="https://kit.fontawesome.com/e1e4658b74.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.0/axios.min.js"
+        integrity="sha512-OdkysyYNjK4CZHgB+dkw9xQp66hZ9TLqmS2vXaBrftfyJeduVhyy1cOfoxiKdi4/bfgpco6REu6Rb+V2oVIRWg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./reponsive.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container" id="ba">
+            <div class="header-main">
+                <div class="logo-food">
+                    <a href="">
+                        <img src="/access/header/img/foodsto-logo.png" alt="">
+                    </a>
+                </div>
+                <!-- menu -->
+               <nav class="nav-menu">
+                <div class="close-nav-menu" onclick="closes()">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+                 <ul class="menu">
+                    <li class="menu-item menu-has-children">
+                        <a href="#" class="menu-children" >HOME <i class="plus"></i></a>
+                        <ul class="sub-menu">
+                            <li class="menu-item"><a href="#">Home Main</a></li>
+                            <li class="menu-item"><a href="#">Home 1</a></li>
+                            <li class="menu-item"><a href="#">Home 2</a></li>
+
+                        </ul>
+                    </li>
+
+                    <li class="menu-item menu-has-children">
+                        <a href="#" class="menu-children" >PAGE <i class="plus"></i></a>
+                        <ul class="sub-menu">
+                            <li class="menu-item"><a href="#">About Us</a></li>
+                            <li class="menu-item"><a href="#">Our Team</a></li>
+                            <li class="menu-item"><a href="#">Contract US</a></li>
+
+                        </ul>
+                    </li>
+
+                    <li class="menu-item menu-has-children">
+                        <a href="#" class="menu-children" >SHOP <i class="plus"></i></a>
+                        <ul class="sub-menu">
+                            <li class="menu-item"><a href="#">Category List</a></li>
+                            <li class="menu-item"><a href="#">Shop Grid</a></li>
+                            <li class="menu-item"><a href="#">Shop Width Sidebar</a></li>
+                            <li class="menu-item"><a href="#">Product Filter</a></li>
+
+                        </ul>
+                    </li>
+
+                    <li class="menu-item menu-has-children" id="e">
+                        <a href="#" class="menu-children" >PRODUCT<i class="plus"></i></a>
+                        <ul class="sub-menu">
+                            <li class="menu-item"><a href="#">New Product</a></li>
+                            <li class="menu-item"><a href="#">On Sale Product</a></li>
+                            <li class="menu-item"><a href="#">Blackorder Product</a></li>
+                            <li class="menu-item"><a href="#">Out Of Sock Product</a></li>
+                            <li class="menu-item"><a href="#">Variation Product</a></li>
+                            <li class="menu-item"><a href="#">Grouper Product</a></li>
+
+                        </ul>
+                    </li>
+
+                    <li class="menu-item menu-has-children">
+                        <a href="#" class="menu-children">BLOG <i class="plus"></i></a>
+                        <ul class="sub-menu">
+                            <li class="menu-item"><a href="#">One Column Blog</a></li>
+                            <li class="menu-item"><a href="#">Two Column Blog</a></li>
+                            <li class="menu-item"><a href="#">Three Column Blog</a></li>
+                            <li class="menu-item"><a href="#">Left Column Blog</a></li>
+                            <li class="menu-item"><a href="#">Right Column Blog</a></li>
+
+                        </ul>
+                    </li>
+                 </ul>
+               </nav>
+               <!-- icon -->
+               <nav class="nav-icon">
+                <ul class="icon-menu">
+                    <li class="icon-information icon-repon" onclick="iconMenu()"><a href="#"><i class="fa-solid fa-user"></i></a>
+                        <ul class="sub-icon">
+                            <li class="icon-item"><a class="profile" href="/modules/profile/profile.html">Thông Tin Cá Nhân</a></li>
+                            <li class="icon-item"><a href="/auth/login.html">Đăng Xuất</a></li>
+                        </ul>
+                    </li>
+                    <li class="icon-information icon-repon"><a href="#"><i class="fa-solid fa-heart"></i></a>
+                        
+                    </li>
+                    <li class="icon-information icon-repon"><a href="#"><i class="fa-sharp fa-solid fa-cart-shopping"></i></a>
+                      
+                   </li>
+                    <li class="icon-information icon-repon"><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                    </li>
+
+                    <li id="aa"  class="icon-information icon-repon" onclick="menus()" >
+                            <i class="fa-solid fa-bars"></i>
+                    </li>
+                </ul>
+               </nav>
+            </div>
+        </div>
+    </header>
+    <div class="main">
+        <div id="page">
+            <!-- <img src="../../access/img/food-2-1-1536x344-1-4.png" alt=""> -->
+            <div class="container">
+                <h1>category list</h1>
+                <ul>
+                    <li>
+                        <a href="../../index.html">
+                            <i class="fa fa-home mr-2">Home</i>
+                        </a>
+                        
+                    </li>
+                    <li class="fa-solid fa-angle-right">
+                    </li>
+                    <p style="color: #3bb77e;display: inline-block;font-weight: revert;
+                    font-size: 18px;">category list</p> 
+                </ul>
+            </div>
+        </div>
+        <div class="contract-all">
+            <div class="food-cate">
+            </div>
+        </div>
+    </div>
+    <!-- footer -->
+    <div class="footer-information">
+        <div class="grid footer-all">
+            <div class="row">
+                <div class="col-3">
+                    <div class="footer-img"><img src="../header/img/foodsto-logo.png" alt=""> </div>
+                    <div class="footer-comment">
+                        <p>Subscribe to our newsletter and get 10% off your first purchase.</p>
+                    </div>
+                    <div class="footer-icon">
+                        <a href=""> <i class="fa-brands fa-square-facebook"></i></a>
+
+                        <a href=""><i class="fa-brands fa-square-instagram"></i></a>
+
+                        <a href=""> <i class="fa-brands fa-square-twitter"></i></a>
+
+                        <a href=""><i class="fa-brands fa-linkedin"></i> </a>
+                    </div>
+                </div>
+                
+
+
+                <div class="col-3">
+                    <div class="footer-content"> <p> Link </p> </div>
+                    <div class="footer-link">
+                        <a href=""> <i class="fa-solid fa-angle-right"></i> My account</a>
+                    </div>
+                    <div class="footer-link">
+                        <a href=""><i class="fa-solid fa-angle-right"></i> Checkout </a>
+                    </div>
+
+                    <div class="footer-link">
+                        <a href=""><i class="fa-solid fa-angle-right"></i> Wishlist </a>
+                    </div>
+
+                    <div class="footer-link">
+                        <a href=""><i class="fa-solid fa-angle-right"></i> Shopping Cart </a>
+                    </div>
+                </div>
+
+               
+                <div class="col-3">
+                    <div class="footer-content">
+                        <p>  Information </p>
+                    </div>
+                    <div class="footer-link">
+                        <a href="">  <i class="fa-solid fa-angle-right"></i> About Us </a>
+                    </div>
+                    <div class="footer-link">
+                        <a href="">   <i class="fa-solid fa-angle-right"></i> Our Team  </a>
+                    </div>
+
+                    <div class="footer-link">
+                        <a href=""> <i class="fa-solid fa-angle-right"></i> Contract Us </a>
+                    </div>
+
+                    <div class="footer-link">
+                        <a href="">   <i class="fa-solid fa-angle-right"></i> Blog </a>
+                    </div>
+                </div>
+
+
+                <div class="col-3">
+                    <div class="footer-content">
+                        <p>
+                            Quick Contact
+                        </p>
+                    </div>
+                    <div class="footer-house">
+                            <i class="fa-solid fa-house"></i>
+                            <span>1234 North Avenue Luke Lane, South Bend, IN 360001</span>
+                    </div>
+                    <div class="footer-mail">
+                        <a href=""> <i class="fa-solid fa-envelope"></i> dinhthaituan332003@gmail.com </a>
+                    </div>
+
+                    <div class="footer-phone">
+                        <a href="">   <i class="fa-solid fa-phone"></i>(84+) +0934160908 </a>
+                    </div>
+                </div>
+            </div>
+            <div class="comment"></div>
+        
+            <div class="footer-and">
+                <div class="footer-end"> <p> Copyright 2023 foodsto All Rights Reserved.</p> </div>
+            </div>
+        <script>
+            var dialog = document.getElementById('dialog');
+            console.log(dialog);
+        </script>
+</div>
+</div>   
+    
+    <script src="../../api/index.js"></script>
+</body>
+</html>

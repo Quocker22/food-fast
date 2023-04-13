@@ -13,10 +13,10 @@ html{
     scroll-behavior: smooth;
     background-color:rgba(0 , 0, 0 ,0.01 );
 }
-html::-webkit-scrollbar {
+/* html::-webkit-scrollbar {
     font-size: 10rem ;
     font-weight: 900;
-}
+} */
 
 .open {
     display: inline-flex!important
@@ -43,11 +43,17 @@ a {
     padding: 0;
 }
 
-.row {
+.raw{
     display: flex;
-    flex-wrap: wrap;
     font-size: 1.3rem;
     padding: 50px 50px 20px 50px;
+}
+
+.row {
+    display: flex;
+    font-size: 1.3rem;
+    padding: 50px 50px 20px 50px;
+    margin-left: 60px;
 }
 
 .col-3 {
@@ -55,6 +61,17 @@ a {
     max-width: 20%;
     margin-left: 45px;
 }
+
+.c-4 {
+    flex: 0 0 30.33333%;
+    max-width: 60%;
+}
+
+.c-8 {
+    flex: 0 0 66.66667%;
+    max-width: 70.66667%;
+}
+
 .delete {
     display: none;
     opacity: 1;
@@ -63,3 +80,4 @@ a {
 .rotate {
     transform:  translateX(-35%) translateY(2%) rotate(-90deg);
   }
+
