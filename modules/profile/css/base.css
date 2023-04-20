@@ -7,8 +7,9 @@
     --fb-color:#4867aa;
     --gg-color:#db4437;
     --green--color :#c2ecdae0;
-
-
+    --text-color:#9B9B9B
+    
+   
 }
 
 html {
@@ -21,243 +22,31 @@ html {
   
 }
 
-.active-profile {
-    background: rgba(0, 0, 0, 0.2);
-    height: 56px;
-    padding: 5px;
-}
-
-
-
-.row-profile {
-    display: flex;
-    justify-content: center;
-    margin-top: 50px;
-    flex-wrap: nowrap;
-    justify-content: center;
-    margin-top: 30px;
+body {
+    background-color: rgb(245, 245, 250);
 }
 
 .col-4 {
-    min-width: 300px;
+    width: 18.66667% ;
     position: relative;
-    padding: 0 15px 5px;
-    width: 20%;
+    margin-right: 10px;
 }
 
 .col-8 {
-    width: 915px;
+    width: 81.33333%;
     position: relative;
+    margin-left: 10px;
 }
 
-.br-hover:hover {
+
+.active-profile {
     background-color: rgba(0, 0, 0, 0.1);
 }
 
-
-
-.icon-close:hover {
-    background-color: rgba(0, 0, 0, 0.1);
+.open {
+    opacity: 1;
 }
 
-
-
-.bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-
-
-.update {
-    color: rgba(3, 3, 255, 0.7);
-    font-size: 1.6rem;
-    width: 100%;
-    padding: 5px 10px ;
-    border-radius: 5px;
-    border: 1px solid rgba(3, 3, 255, 0.7);
-}
-
-
-
-
-/* PC */
-@media screen and (max-width:1270px) {
-    .information-all{
-        
-        flex-wrap: wrap;
-    }
-    .information-right {
-        width: 450px;
-    }
-
-    .information-left {
-        width: 450px;
-    }
-    
-    .handle-right .account.account-two {
-        display: none ;
-    }
-    
-    .list {
-        margin-top: 4px;
-        font-size: 29px;
-    }
-    .month {
-        margin-right: 7px;
-    }
-
-    .days {
-        margin-right: 7px;
-    }
-
-    .form-nick-name {
-        justify-content: unset;
-    }
-
-    .form-nick-name .nick-name-input {
-        margin-left: 20px;
-    }
-
-    .form-name .full-name-input {
-        margin-left: 30px;
-    }
-
-    .form-name {
-        justify-content: unset;
-    }
-
-
-    .list-info__item:not() {
-        padding: 10px;
-        margin-bottom: 0;
-    }
-
-    #list {
-        display: none;
-        font-size: 29px;
-        margin-top: 4px;
-    }
-
-
-    .information h1 {
-        margin-left: 15px;
-    }
-
-    .col-8 {
-        width: 100%;
-    }
-
-    .icon-list {
-        display: none;
-    }
-
-    .information-all {
-        width: 100%;
-        display: flex;
-        justify-content: space-around;
-        background-color: white;
-    }
-
-    .icon-close {
-        display: none;
-    }
-}
-
-
-@media screen and (max-width:1233px) {
-    
-    .social-network {
-        padding-top: 10px;
-    }
-    .password-pin{
-        padding-top: 10px;
-    }
-    .phone-email {
-        padding-top: 10px;
-    }
-
-
-    .info-list {
-        padding-bottom: 0;
-        padding-left: 27px;
-        justify-content: flex-start;
-    }
-
-    .information-right {
-        margin-left: 0;
-        padding: 0 30px;
-        width: 100%;
-    }
-
-    .information-left {
-        width: 100%;
-    }
-    
-}
-
-/* Mobile */
-@media only screen and (max-width:838px){
-    .info {
-        height: 52px;
-        margin-left: 17px;
-        line-height: 73px;
-    }
-
-    .information-all {
-        margin-top: 0;
-    }
-
-    .account.account-two {
-        display: flex;
-    }
-    
-    .col-8 .handle-right .account.account-two {
-        display: flex;
-    }
-    .handle-right .account.account-two {
-        display: block ;
-    }
-
-    .col-4 {
-        display: none;
-    }
-    
-    .list-info.two {
-        position: relative;
-        top: 26px;
-        right: 60px;
-    }
-
-    .year {
-        margin-right: 0;
-    }
-
-    .date {
-        padding-left: 11px;
-        padding-right: 9px;
-        margin-right: 0;
-    }
-
-    .info-list {
-        text-align: start;
-    }
-
-    .info-list > aside {
-        width: 100%;
-        margin-left: 11px;
-        margin-top: 50px;
-    }
-
-    .information-right {
-        width: 100%;
-    }
-    .information-left {
-        width: 100%;
-    }
-
-    .information-all {
-        flex-wrap: wrap;
-    }
+.line-hover {
+    color: #1F68BB !important;
 }

@@ -964,4 +964,11 @@
     }
 }
 
-
+/* header */
+.container#ba {
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 999;
+    height: 60px;
+}

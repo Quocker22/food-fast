@@ -13,17 +13,20 @@
     <link rel="stylesheet" href="./access/header/css/reponsive.css">
     <link rel="stylesheet" href="./access/img/">
     <link rel="stylesheet" href="./access/header/css/reponsive.css">
+    <link rel="stylesheet" href="./components/header.html">
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://kit.fontawesome.com/e1e4658b74.js" crossorigin="anonymous"></script>
-    <script src="./api/index.js"></script>
+    
     <script src="./access/header/css/dropdown.js"></script>
     <link rel="stylesheet" href="./auth/login.html">
     <link rel="stylesheet" href="./modules/profile/profile.html">
-    <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
-    <script src="./cartanddialog.js"></script>
-    
-<body>
+    <script src="https://code.jquery.com/jquery-3.6.3.js"
+        integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
 
+<body>
+    <!--toast message-->
+    <div id="toast">
+    </div>
     <!--cartlist-->
     <div class="cart">
         <i class="fa-solid fa-xmark" style="font-size: 30px;cursor: pointer;" onclick="document.querySelector('.cart').style.right = '-100%'"></i>
@@ -49,13 +52,13 @@
         </div>
         <button>Checkout
 
-        </button>
+            </button>
         </div>
-        
+
     </div>
 
     <!--dialog-->
-    
+
     <dialog id="dialog">
         <div class="icon">
             <i class="fa-solid fa-check"></i>
@@ -69,110 +72,20 @@
         <!-- <div class="result"></div> -->
     </dialog>
 
-      
+
     <!-- box-body -->
+    <div id="component-header">
+        <script>
+            fetch('components/header.html')
+              .then(response => response.text())
+              .then(data => {
+                document.querySelector('#component-header').innerHTML = data;
+              });
+        </script>
+    </div>
     <!-- header -->
-    <header class="header">
-        <div class="container" id="ba">
-            <div class="header-main">
-                <div class="logo-food">
-                    <a href="">
-                        <img src="/access/header/img/foodsto-logo.png" alt="">
-                    </a>
-                </div>
-                <!-- menu -->
-               <nav class="nav-menu">
-                <div class="close-nav-menu" onclick="closes()">
-                    <i class="fa-solid fa-xmark"></i>
-                </div>
-                 <ul class="menu">
-                    <li class="menu-item menu-has-children ">
-                        <a href="#" class="menu-children" >HOME <i class="plus"></i></a>
-                        <ul class="sub-menu">
-                            <li class="menu-item"><a href="#">Home Main</a></li>
-                            <li class="menu-item"><a href="#">Home 1</a></li>
-                            <li class="menu-item"><a href="#">Home 2</a></li>
 
-                        </ul>
-                    </li>
 
-                    <li class="menu-item menu-has-children">
-                        <a href="#" class="menu-children" >PAGE <i class="plus"></i></a>
-                        <ul class="sub-menu">
-                            <li class="menu-item"><a href="#">About Us</a></li>
-                            <li class="menu-item"><a href="#">Our Team</a></li>
-                            <li class="menu-item"><a href="#">Contract US</a></li>
-
-                        </ul>
-                    </li>
-
-                    <li class="menu-item menu-has-children">
-                        <a href="#" class="menu-children" >SHOP <i class="plus"></i></a>
-                        <ul class="sub-menu">
-                            <li class="menu-item"><a href="#">Category List</a></li>
-                            <li class="menu-item"><a href="#">Shop Grid</a></li>
-                            <li class="menu-item"><a href="#">Shop Width Sidebar</a></li>
-                            <li class="menu-item"><a href="#">Product Filter</a></li>
-
-                        </ul>
-                    </li>
-
-                    <li class="menu-item menu-has-children" id="e">
-                        <a href="#" class="menu-children" >PRODUCT<i class="plus"></i></a>
-                        <ul class="sub-menu">
-                            <li class="menu-item"><a href="#">New Product</a></li>
-                            <li class="menu-item"><a href="#">On Sale Product</a></li>
-                            <li class="menu-item"><a href="#">Blackorder Product</a></li>
-                            <li class="menu-item"><a href="#">Out Of Sock Product</a></li>
-                            <li class="menu-item"><a href="#">Variation Product</a></li>
-                            <li class="menu-item"><a href="#">Grouper Product</a></li>
-
-                        </ul>
-                    </li>
-
-                    <li class="menu-item menu-has-children">
-                        <a href="#" class="menu-children">BLOG <i class="plus"></i></a>
-                        <ul class="sub-menu">
-                            <li class="menu-item"><a href="#">One Column Blog</a></li>
-                            <li class="menu-item"><a href="#">Two Column Blog</a></li>
-                            <li class="menu-item"><a href="#">Three Column Blog</a></li>
-                            <li class="menu-item"><a href="#">Left Column Blog</a></li>
-                            <li class="menu-item"><a href="#">Right Column Blog</a></li>
-
-                        </ul>
-                    </li>
-                 </ul>
-               </nav>
-               <!-- icon -->
-               <nav class="nav-icon">
-                <ul class="icon-menu">
-                    <li class="icon-information icon-repon" onclick="iconMenu()"><a href="#"><i class="fa-solid fa-user"></i></a>
-                        <ul class="sub-icon">
-                            <li class="icon-item"><a class="profile" href="/modules/profile/profile.html">Thông Tin Cá Nhân</a></li>
-                            <li class="icon-item"><a href="./auth/login.html">Đăng Xuất</a></li>
-                        </ul>
-                    </li>
-                    <li class="icon-information icon-repon"><a href="#"><i class="fa-solid fa-heart"></i></a>
-                        
-                    <li class="icon-information icon-repon" onclick=checkCartProduct()><a ><i class="fa-sharp fa-solid fa-cart-shopping" style="position: relative;">
-                        <span class="cart-notice">0</span>
-                    </i></a>
-                      
-                   </li>
-                    <li class="icon-information icofn-repon"><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
-                    </li>
-
-                    <li id="aa"  class="icon-information icon-repon" onclick="menus()" >
-                            <i class="fa-solid fa-bars"></i>
-                    </li>
-                </ul>
-            </div>
-                
-            </div>
-        </div>
-    </header>
-
-    
     <!-- slider -->
     <div class="slider">
         <div class="slider__display">
@@ -181,15 +94,21 @@
                     <h1>Fresh</h1>
                     <h1 class="green">Grocery</h1>
                 </div>
-                <div class="pen__call"><h1>Shopping</h1></div>
-                <div class="slider__pencel"><p>It is a long established fact that a reader will be the readable content of page</p></div>
+                <div class="pen__call">
+                    <h1>Shopping</h1>
+                </div>
+                <div class="slider__pencel">
+                    <p>It is a long established fact that a reader will be the readable content of page</p>
+                </div>
                 <div class="slider__view">
                     <a href="./access/CategoryList/index.html" class="slider__more">VIEW MORE</a>
                     <i class="fa-solid fa-right-long"></i>
                 </div>
             </div>
             <!-- lớp giả -->
-            <div class="slider-left rotate" ><h1>Organic</h1></div>
+            <div class="slider-left rotate">
+                <h1>Organic</h1>
+            </div>
             <div class="slider__img">
                 <div class="slider__photo">
                     <img src="./access/header/img/man.png" alt="" class="photo">
@@ -198,49 +117,43 @@
         </div>
     </div>
     <!-- logo -->
-            <div class="logo-salads">
-                <div class="comment-one">
-                    <div class="logo-img"><img src="./access/header/img/gr4.jpg" alt=""></div>
-                    <div class="logo-comment">
-                        <h2>Grocery</h2>
-                        <p>Fresh grocery delivered </p>
-                    </div>
-                    <div class="logo-img"><img src="./access/header/img/salas2.webp" alt=""></div>
-                    <div class="logo-comment">
-                        <h2> Salads</h2>
-                        <p> Order nutritious salads </p>
-                    </div>
-            
-                    <div class="logo-img"> <img src="./access/header/img/cv2.png" alt=""></div>
-                    <div class="logo-comment">
-                        <h2>Cart Value</h2>
-                        <p>Cart value review your cart</p>
-                    </div>
-        
-                    <div class="logo-img"><img src="./access/header/img/sp1.jpg" alt=""></div>
-                    <div class="logo-comment">
-                        <h2> Support </h2>
-                        <p> Fresh grocery delivere </p>
-                    </div>
-                </div>
+    <div class="logo-salads">
+        <div class="comment-one">
+            <div class="logo-img"><img src="./access/header/img/gr4.jpg" alt=""></div>
+            <div class="logo-comment">
+                <h2>Grocery</h2>
+                <p>Fresh grocery delivered </p>
+            </div>
+            <div class="logo-img"><img src="./access/header/img/salas2.webp" alt=""></div>
+            <div class="logo-comment">
+                <h2> Salads</h2>
+                <p> Order nutritious salads </p>
             </div>
 
-    
+            <div class="logo-img"> <img src="./access/header/img/cv2.png" alt=""></div>
+            <div class="logo-comment">
+                <h2>Cart Value</h2>
+                <p>Cart value review your cart</p>
+            </div>
+
+            <div class="logo-img"><img src="./access/header/img/sp1.jpg" alt=""></div>
+            <div class="logo-comment">
+                <h2> Support </h2>
+                <p> Fresh grocery delivere </p>
+            </div>
+        </div>
+    </div>
+
     <!-- contract -->
     <div class="contract-all">
         <div class="food-cate">
         </div>
     </div>
     
-
-    
-
-
- 
     <!-- logo -->
     <!-- //  Phần của hoàng : bắt đầu -->
     <div class="shopping">
-        <div class="title"> 
+        <div class="title">
             <span>Organically Produced</span>
             <h2>New Organic Add-ons</h2>
             <div class="divider"></div>
@@ -250,127 +163,126 @@
         <!-- list -->
         <div class="tooltip">
             <ul id="list-tooltip"></ul>
-                <!-- Danh sách các món -->
+            <!-- Danh sách các món -->
             <div class="menu-breakfast open"></div>
             <div class="paging-number">
                 <i class="fa-solid fa-angle-left"></i>
-                    <div class="pagination">
-                    </div>
+                <div class="pagination">
+                </div>
                 <i class="fa-solid fa-angle-right"></i>
             </div>
         </div>
-            
-            
-            
-        </div>
-        <div class="pseudo-class" onclick="getElement()">
-            <div class="box">
-                <div class="box-content">
-                    <div class="box-left"> <img src="./access/header/img/snack-1.jpg" alt="" class="snack-1"> </div>
-                    
-                    <div class="box-right">
-                        <div class="child-box">
+
+
+
+    </div>
+    <div class="pseudo-class" onclick="getElement()">
+        <div class="box">
+            <div class="box-content">
+                <div class="box-left"> <img src="./access/header/img/snack-1.jpg" alt="" class="snack-1"> </div>
 
                 <div class="box-right">
                     <div class="child-box">
 
-                        <span>Chips</span>
+                        <div class="box-right">
+                            <div class="child-box">
 
-                        <h2>$10.00</h2>
+                                <span>Chips</span>
 
-                        <p>A side dish, sometimes referred to as a side order,
-                            side item, or simply a side,
-                            is a food item that accompanies the entrée or main course at a meal.</p>
+                                <h2>$10.00</h2>
 
-                        <div id="but-amount">
-                            <div class="plus-minus">
-                                <button class="minus-btn" onclick="handleMinus()"><i
-                                        class="fa-solid fa-minus"></i></button>
-                                <input type="1" name="amount" id="amount" value="1">
-                                <button class="plus-btn" onclick="handlePlus()"><i
-                                        class="fa-solid fa-plus"></i></button>
-                            </div>
-                            <div class="link-cart">
-                                <a>ADD TO CART
-                                    <i class="fa-sharp fa-solid fa-right-long"></i>
+                                <p>A side dish, sometimes referred to as a side order,
+                                    side item, or simply a side,
+                                    is a food item that accompanies the entrée or main course at a meal.</p>
+
+                                <div id="but-amount">
+                                    <div class="plus-minus">
+                                        <button class="minus-btn" onclick="handleMinus()"><i
+                                                class="fa-solid fa-minus"></i></button>
+                                        <input type="1" name="amount" id="amount" value="1">
+                                        <button class="plus-btn" onclick="handlePlus()"><i
+                                                class="fa-solid fa-plus"></i></button>
+                                    </div>
+                                    <div class="link-cart">
+                                        <a>ADD TO CART
+                                            <i class="fa-sharp fa-solid fa-right-long"></i>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <a href="#">
+                                    <i class="fa-solid fa-heart"></i>
+                                    <span>Add to wishlist</span>
                                 </a>
+
+                                <ul class="add-info">
+                                    <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                                    <li><a href="#"><i class="fa-brands fa-google"></i></a></li>
+                                    <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                                </ul>
+
+                                <ul class="product">
+                                    <li><a href="#">
+                                            <div class="item-product">
+                                                <i class="fa-solid fa-shield"></i>
+                                                <span>Security policy</span>
+                                            </div>
+                                        </a></li>
+
+                                    <li><a href="#">
+                                            <div class="item-product">
+                                                <i class="fa-solid fa-car"></i>
+                                                <span>delivery policy</span>
+                                            </div>
+                                        </a></li>
+
+                                    <li><a href="#">
+                                            <div class="item-product">
+                                                <i class="fa-solid fa-right-left"></i>
+                                                <span>return policy</span>
+                                            </div>
+                                        </a></li>
+                                </ul>
                             </div>
                         </div>
-
-                        <a href="#">
-                            <i class="fa-solid fa-heart"></i>
-                            <span>Add to wishlist</span>
-                        </a>
-
-                        <ul class="add-info">
-                            <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                            <li><a href="#"><i class="fa-brands fa-google"></i></a></li>
-                            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
-                        </ul>
-
-                        <ul class="product">
-                            <li><a href="#">
-                                    <div class="item-product">
-                                        <i class="fa-solid fa-shield"></i>
-                                        <span>Security policy</span>
-                                    </div>
-                                </a></li>
-
-                            <li><a href="#">
-                                    <div class="item-product">
-                                        <i class="fa-solid fa-car"></i>
-                                        <span>delivery policy</span>
-                                    </div>
-                                </a></li>
-
-                            <li><a href="#">
-                                    <div class="item-product">
-                                        <i class="fa-solid fa-right-left"></i>
-                                        <span>return policy</span>
-                                    </div>
-                                </a></li>
-                        </ul>
+                        <div class="out">
+                            <i class="fa-solid fa-xmark close-js"></i>
+                        </div>
                     </div>
-                </div>
-                <div class="out">
-                    <i class="fa-solid fa-xmark close-js"></i>
                 </div>
             </div>
         </div>
     </div>
-</div>
-        </div>
 
     <!-- Phần của hoàng : kết thúc-->
 
     <!-- List menu  -->
-        <div class="list-menu">
-            <div class="name-naturally">
-                <div class="organic-product">
-                    <div class="naturally">
-                        <h1>NATURALLY</h1>
-                    </div>
-                    <div class="organic">
-                        <p>No Chemicals,& No Pesticides</p>
-                        <h3>Fresh Organic Products</h3>
-                    </div>
-             </div>
+    <div class="list-menu">
+        <div class="name-naturally">
+            <div class="organic-product">
+                <div class="naturally">
+                    <h1>NATURALLY</h1>
+                </div>
+                <div class="organic">
+                    <p>No Chemicals,& No Pesticides</p>
+                    <h3>Fresh Organic Products</h3>
+                </div>
+            </div>
 
-                <div class="grid">
-                    <div class="row">
-                        <div class="c-4">
-                                <div class="organic-list-id">
-                            </div>
+            <div class="grid">
+                <div class="row">
+                    <div class="c-4">
+                        <div class="organic-list-id">
                         </div>
+                    </div>
 
-                        <div class="c-8">
-                            <div class="list-menu-item">
-                                <div class="list-nav-memnu">
-                                    <div class="navba-menu-list">
-                                        <div class="navba-menu">
-                                           
-                                        </div>
+                    <div class="c-8">
+                        <div class="list-menu-item">
+                            <div class="list-nav-memnu">
+                                <div class="navba-menu-list">
+                                    <div class="navba-menu">
+
                                     </div>
                                 </div>
                             </div>
@@ -379,128 +291,57 @@
                 </div>
             </div>
         </div>
+    </div>
 
-        <!-- sale up -->
-        <div class="sale-food">
-            <div class="sale-up">
-                <div class="sale-up-img">
-                    <div class="sale-img">
-                        <img id="sale-img-food" src="./access/header/img/sale-up3.png" alt="">
-                    
+    <!-- sale up -->
+    <div class="sale-food">
+        <div class="sale-up">
+            <div class="sale-up-img">
+                <div class="sale-img">
+                    <img id="sale-img-food" src="./access/header/img/sale-up3.png" alt="">
+
                     <div class="sale-up-content">
                         <p>Weekend Offer</p>
                         <h1>Organic Foods Up To 50% off</h1>
                         <button class="sale-button">
                             <div class="sale-shop-now">
-                                <span class="shop-iq">  S </span>
-                                <span class="shop-iq">  h </span>
-                                <span class="shop-iq">  o </span>
-                                <span class="shop-iq">  p </span>
+                                <span class="shop-iq"> S </span>
+                                <span class="shop-iq"> h </span>
+                                <span class="shop-iq"> o </span>
+                                <span class="shop-iq"> p </span>
                             </div>
                             <div class="sale-up-now">
-                                <span class="now-ip">  n </span>
-                                <span class="now-ip">  o </span>
-                                <span class="now-ip">  w </span>
+                                <span class="now-ip"> n </span>
+                                <span class="now-ip"> o </span>
+                                <span class="now-ip"> w </span>
                             </div>
                             <i class="fa-solid fa-arrow-right-long"></i>
                         </button>
                     </div>
-                    </div>
                 </div>
             </div>
         </div>
+    </div>
 
-      
 
-    
+
+
     <!-- footer -->
-    <div class="footer-information">
-        <div class="grid footer-all">
-            <div class="raw">
-                <div class="col-3">
-                    <div class="footer-img"><img src="./access/header/img/foodsto-logo.png" alt=""> </div>
-                    <div class="footer-comment">
-                        <p>Subscribe to our newsletter and get 10% off your first purchase.</p>
-                    </div>
-                    <div class="footer-icon">
-                        <a href=""> <i class="fa-brands fa-square-facebook"></i></a>
-
-                        <a href=""><i class="fa-brands fa-square-instagram"></i></a>
-
-                        <a href=""> <i class="fa-brands fa-square-twitter"></i></a>
-
-                        <a href=""><i class="fa-brands fa-linkedin"></i> </a>
-                    </div>
-                </div>
-             <div class="col-3">
-                    <div class="footer-content"> <p> Link </p> </div>
-                    <div class="footer-link">
-                        <a href=""> <i class="fa-solid fa-angle-right"></i> My account</a>
-                    </div>
-                    <div class="footer-link">
-                        <a href=""><i class="fa-solid fa-angle-right"></i> Checkout </a>
-                    </div>
-
-                    <div class="footer-link">
-                        <a href=""><i class="fa-solid fa-angle-right"></i> Wishlist </a>
-                    </div>
-
-                    <div class="footer-link">
-                        <a href=""><i class="fa-solid fa-angle-right"></i> Shopping Cart </a>
-                    </div>
-                </div>
-
-               
-                <div class="col-3">
-                    <div class="footer-content">
-                        <p>  Information </p>
-                    </div>
-                    <div class="footer-link">
-                        <a href="">  <i class="fa-solid fa-angle-right"></i> About Us </a>
-                    </div>
-                    <div class="footer-link">
-                        <a href="">   <i class="fa-solid fa-angle-right"></i> Our Team  </a>
-                    </div>
-
-                    <div class="footer-link">
-                        <a href=""> <i class="fa-solid fa-angle-right"></i> Contract Us </a>
-                    </div>
-
-                    <div class="footer-link">
-                        <a href="">   <i class="fa-solid fa-angle-right"></i> Blog </a>
-                    </div>
-                </div>
-
-
-                <div class="col-3">
-                    <div class="footer-content">
-                        <p>
-                            Quick Contact
-                        </p>
-                    </div>
-                    <div class="footer-house">
-                            <i class="fa-solid fa-house"></i>
-                            <span>1234 North Avenue Luke Lane, South Bend, IN 360001</span>
-                    </div>
-                    <div class="footer-mail">
-                        <a href=""> <i class="fa-solid fa-envelope"></i> dinhthaituan332003@gmail.com </a>
-                    </div>
-
-                    <div class="footer-phone">
-                        <a href="">   <i class="fa-solid fa-phone"></i>(84+) +0934160908 </a>
-                    </div>
-                </div>
-            </div>
-            <div class="comment"></div>
-        
-            <div class="footer-and">
-                <div class="footer-end"> <p> Copyright 2023 foodsto All Rights Reserved.</p> </div>
-            </div>
-       
-</div>
-</div>   
-
-<script src="./access/header/css/main.js"></script>
+    <div id="component-footer">
+        <script>
+            fetch('components/footer.html')
+              .then(response => response.text())
+              .then(data => {
+                document.querySelector('#component-footer').innerHTML = data;
+              });
+        </script>
+    </div>
+    <script src="./api/index.js"></script>
+    <script src="./access/header/css/main.js"></script>
+    <script src="./toastMessage.js"></script>
+    
 </body>
 
 </html>
+
+
