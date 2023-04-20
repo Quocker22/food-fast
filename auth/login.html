@@ -1,135 +1,147 @@
-<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.0/axios.min.js" integrity="sha512-OdkysyYNjK4CZHgB+dkw9xQp66hZ9TLqmS2vXaBrftfyJeduVhyy1cOfoxiKdi4/bfgpco6REu6Rb+V2oVIRWg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://kit.fontawesome.com/e1e4658b74.js" crossorigin="anonymous"></script>
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.0/axios.min.js"
+  integrity="sha512-OdkysyYNjK4CZHgB+dkw9xQp66hZ9TLqmS2vXaBrftfyJeduVhyy1cOfoxiKdi4/bfgpco6REu6Rb+V2oVIRWg=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+></script>
+<script
+  src="https://kit.fontawesome.com/e1e4658b74.js"
+  crossorigin="anonymous"
+></script>
 <script src="../api/index.js"></script>
-<link rel="stylesheet" href="./login/asset/css/base.css">
-<link rel="stylesheet" href="./login/asset/css/extra.css">
-<link rel="stylesheet" href="./login/asset/css/resposive.css">
-<link rel="stylesheet" href="../access/img/bg-auth.png">
-<link rel="stylesheet" href="../index.html">
+<link rel="stylesheet" href="./login/asset/css/extra.css" />
+<link rel="stylesheet" href="./login/asset/css/base.css" />
+<link rel="stylesheet" href="./login/asset/css/resposive.css" />
+<link rel="stylesheet" href="../api/index.js">
+<link rel="stylesheet" href="../access/header/css/Main.css">
 <body>
-    <div class="header-login">
-        <div class="row">
-            <div class="col-4">
-                <div class="header__img"></div>
-                <div class="container-content">
-                    <div class="footer__contract">
-                        <!-- ALL -->
-                        <div class="footer__food">
-                            <!-- logo -->
-                           <div class="logo__food">
-                            <a href="">Food</a>
-                           </div>
-
-                           <div class="sign__food">
-                            Sign Into Your Account
-                           </div>
-                           <!-- email -->
-                           <div class="commemt__emai">
-                              <div class="address">
-                                <label for="emai" class="content__email" >Email address</label>
-                              </div>
-                              <div class="emai__login">
-                                  <i class="fa-regular fa-envelope"></i>
-                                <input name="email" type="email" placeholder="Email Address" class="email__from">
-                            </div>
-                           </div>
-                        
-                           <!-- Password -->
-                           <div class="commemt__password">
-                              <div class="password__add">
-                                <label for="password" class="contract__password">Password</label>
-                              </div>
-                              <div class="login__pass">
-                                  <i class="fa-solid fa-lock"></i>
-                                <input name="password" type="password" placeholder="Password" class="password__from">
-                              </div>
-                            </div>
-                            <div class="password__report"></div>
-
-                           <!-- remember -->
-                           <div class="remember__to-food">
-                               <div class="remember__box">
-                                <input class="remember__check" type="checkbox" id="rememberme">
-                                <label class="remember__check-kout" for="rememberme">
-                                    Remember me
-                                </label>
-                               </div>
-                                   <a class="forgot__to-word" href="">Forgot your password?</a>
-                           </div>
-
-                           <!-- nút ấn login -->
-                           <div class="login__button">
-                            <button class="login-btn" onclick="getDataFromInputLogin()" type="submit">Login</button>
-                           </div>
-                           
-                           <div class="or__will">
-                              <p>Or Login With</p>
-                           </div>
-                         
-                           <!-- facebook -Twitter - Google -->
-                            <div class="facebook__t_gg">
-                              <div class="facebook__btn-icon">
-                                <i class="facebook-icon fa-brands fa-square-facebook"></i>
-                                <a href="" class="facebook__btn">
-                                    Facebook
-                                </a>
-                              </div>
-
-                              <div class="twitter__btn-icon">
-                                <i class="twitter-icon fa-brands fa-twitter"></i>
-                                <a href="" class="Twitter__btn">
-                                    Twitter
-                                </a>
-                              </div>
-
-                              <div class="google__btn-icon">
-                                <i class="google-icon fa-brands fa-google"></i>
-                                <a href="" class="google__btn">
-                                    Google
-                                </a>
-                              </div>
-                            </div>
-                            
-                            <div class="link__register">
-                                <p>
-                                    Don't have an account?
-                                </p>
-                                <a class="register-btn" href="./register.html"> Register here</a>
-                              </div>
-
-                        </div>
-                    </div>
-
+  <!--toast-->
+  <div id="toast"></div>
+  <div id="register">
+    <div class="row">
+      <div class="col-5">
+        <div class="img-logo"></div>
+        <!-- login in box -->
+        <div class="login-up">
+          <div class="login-up--box">
+            <div class="box-container">
+              <!-- title -->
+              <div class="container-content">
+                <div class="login-up__text">
+                  <h1>FOOD</h1>
+                  <p>Sign Into Your Account</p>
                 </div>
-            </div>
 
-
-
-
-            <div class="col-6">
-               <div class="content">
-                    <div class="welcome__food">
-                        <span class="yellow">W</span>
-                        <span class="yellow" >E</span>
-                        <span class="yellow" >L</span>
-                        <span>C</span>
-                        <span>O</span>
-                        <span>M</span>
-                        <span>E</span>
-                        <span>T</span>
-                        <span>O</span>
-                        <span class="yellow">F</span>
-                        <span class="yellow">O</span>
-                        <span class="yellow">O</span>
-                        <span class="yellow">D</span>
+                <!-- forms -->
+                <div class="forms-login">
+                  <!-- Email -->
+                  <h6>Email</h6>
+                  <div class="form-input">
+                    <i class="fa-regular fa-envelope"></i>
+                    <input
+                      type="email"
+                      class="form-control login-email"
+                      placeholder="Email"
+                    />
+                    
+                  </div>
+                  <!-- Password  -->
+                  <h6>Password</h6>
+                  <div class="form-input">
+                    <i class="fa-solid fa-lock"></i>
+                    <input
+                      type="password"
+                      class="form-control login-password"
+                      placeholder="Password"
+                    />
+                  </div>
+                  <!-- remember me  -->
+                  <div class="remember-forgot">
+                    <div class="remember">
+                      <input type="checkbox" />
+                      <span>Remember me</span>
                     </div>
-                   <div class="content-p">
-                    <p>The Food is a website specializing in selling good quality food. Ensuring food hygiene and safety without harmful substances, censored by inspectors.</p>
-                   </div>
-               </div>
-            </div>
-        </div>
-    </div>
 
-   
+                    <div class="forgot">
+                      <a href="#">Forgot your password ?</a>
+                    </div>
+                  </div>
+
+                  <div class="login-error"></div>
+                  <!-- enter login -->
+                  <div class="enter">
+                    <button onclick="getDataFromInputLogin()">Login</button>
+                  </div>
+
+                  <!-- changes login -->
+                  <div class="will-changes">
+                    <p>Or Login With</p>
+                  </div>
+
+                  <!-- facebook -Twitter - Google -->
+                  <div class="changes-btn">
+                    <div class="facebook">
+                      <i class="facebook-icon fa-brands fa-square-facebook"></i>
+                      <a href="" class="facebook-btn">
+                        <span>Facebook</span>
+                      </a>
+                    </div>
+                    <div class="twitter">
+                      <i class="twitter-icon fa-brands fa-twitter"></i>
+                      <a href="" class="Twitter--btn">
+                        <span> Twitter </span>
+                      </a>
+                    </div>
+
+                    <div class="google">
+                      <i class="google-icon fa-brands fa-google"></i>
+                      <a href="" class="google--btn">
+                        <span> Google </span>
+                      </a>
+                    </div>
+                  </div>
+
+                  <!-- accept Login -->
+                  <div class="accept-register">
+                    <span
+                      >Don't have an account ?
+                      <a href="./register.html">Register</a></span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-7">
+        <div class="box-text">
+          <div class="box-body">
+            <span class="changes-color-text">W</span>
+            <span class="changes-color-text">E</span>
+            <span class="changes-color-text">L</span>
+            <span class="changes-color-text">C</span>
+            <span class="changes-color-text">O</span>
+            <span class="changes-color-text">M</span>
+            <span class="changes-color-text">E</span>
+            <span>T</span>
+            <span>O</span>
+            <span class="changes-color-text">F</span>
+            <span class="changes-color-text">O</span>
+            <span class="changes-color-text">O</span>
+            <span class="changes-color-text">D</span>
+
+            <div class="box-body--text">
+              <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s, when an unknown printer took a galley
+                of type and scrambled it to make a type.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>

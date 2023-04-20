@@ -1,0 +1,28 @@
+@media (min-width: 768px) and (max-width: 992px) {
+    .container h1 {
+        font-size: 40px;
+    }
+
+    .food-up {
+        width: 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    .container h1 {
+        font-size: 30px;
+    }
+
+    .food-up {
+        margin: 0;
+        width: 100%;
+    }
+
+    .snack{
+        height: 250px;
+    }
+
+    .contract-all {
+        margin: 40px auto;
+    }
+}

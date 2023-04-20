@@ -1,227 +1,189 @@
-
-
-.container {
+.container-profile {
+    display: flex;
+    margin: 0 10%;
     position: relative;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: auto;
-    background-color: white;
-} 
-/* col-4 */
-
+    padding-top: 60px;
+    min-height: calc(100vh - 100px);
+    background-color: rgb(245, 245, 250)
+}
+/* COL-4 */
 .account {
     display: flex;
-    height: 10vh;
     justify-content: center;
     align-items: center;
-    border: 1px solid rgba(0, 0, 0, 0.5);
-    border-radius: 20px;
-    min-height: 50px;
-}
-
-.account > a {
-    font-size: 33px;
-    margin-right: 16%;
-    color: rgb(59,183,126)
-}
-
-.name-account {
-    font-size: 1.6rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-left: 10px;
-    line-height: 2rem;
-    font-weight: 200;
-}
-
-.icon-list {
-    margin-right: -2px;
-    font-size: 2rem;
-    width: 10%;
-}
-
-.logo-profile{
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    width: 15%;
-    margin-left: -10px;
-}
-
-.user-name {
-    font-weight: 700;
-    color: black;
-}
-
-#list-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-top: 15px;
-    border: solid 1px #ccc;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 15px;
     border-radius: 4px;
+    gap: 25px;
+   
 }
 
-.list-info__item { 
-    padding: 0 18px;
-    display: flex;
-    flex-direction: column;
+.account  img {
+    border-radius: 50%;
 }
 
-.list-info__item:not(:last-child) {
-    margin-bottom: 20px;
-}   
-
-.list-info__item:last-child {   
-    margin-bottom: 20px;
-}
-
-.list-info__item-link {
-    padding: 5px;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.title-and-name p:last-child {
     font-size: 1.6rem;
-    letter-spacing: 1px;
-    color: rgba(0, 0, 0, 0.5);
+ 
 }
 
-.left {
+
+
+/* title-menu */
+.list-title {
     display: flex;
-    justify-content: center;
     align-items: center;
-    gap: 10px;
-}
-
-.left:first-child {
-    padding-right: 5px ;
-}
-
-.space-item {
-    width: 20px;
-    padding-right: 20px;
-}
-
-.handle {
-    background-color: rgba(0, 0, 0, 0.5);
-    display: none;
-}
-
-/* col-8 */
-
-/* THONG TIN TAI KHOAN */
-.handle-right {
-    width: auto;
-    display: none;
-}
-.close {
-    color: rgba(0, 0, 0, 0.4);
-    font-size: 3rem;
-    margin-top: 25px;
+    justify-content: center;
+    height: auto;
+    overflow: hidden;
+    margin-top: 1rem;
+    cursor: pointer;
+    flex-direction: column;
 }
 
 .information {
-    height: 10vh;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 0px 0px 20px 0;
-}
-
-
-.information h1 {
-    margin-top: 30px;
-    font-weight: 600;
-    font-size: 3rem;
-}
-
-.account-user {
-    background-color: white;
+    justify-content: space-between;
     width: 100%;
-    height: auto;
+    gap: 15px;
+    font-size: 1.4rem;
+    padding: 10px 20px;
+}
+
+.information i {
+    color: var(--text-color);
+    padding-right: 10px;
+    font-size: 2.2rem;
+    width: 50px;
+}
+
+.information img {
+    color: var(--text-color);
+    padding-right: 10px;
+    font-size: 2.2rem;
+    width: 50px;
+} 
+
+.information p {
+    color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+}
+
+.information:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* COL-8 */
+.title-information {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    display: none;
+
+}
+
+.title-and-home {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: flex-start;
+    margin-bottom: 4px;
+    height: 90px;
+}
+
+.title-and-home span, 
+.title-and-home i,
+.title-and-home a {
+    font-size: 1.4rem;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.6);
+    
+}
+.title-and-home a {
+    color: #2f2ee9;
+}
+
+.title-and-home span {
+    text-transform: uppercase;
 }
 
 .information-all {
-    display: flex;
-    border-radius: 10px;
-    background-color: white;
-    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 30%);;
-
-}
-/* info left */
-.information-left {
-    width: 450px;
-    margin-left: 15px;
-}
-
-.border-right {
-    border-right: 1px dashed rgba( 0, 0, 0, 0.7);
-}
-
-.info-left {
-    padding: 20px 0;
-    font-size: 1.6rem;
-    font-weight: 300;
-    color: rgba(0, 0, 0, 0.7);
-}
-
-.form {
-    display: flex;
-    align-items: center;
-}
-
-.form-avt {
-    font-size: 4rem;
-    padding: 20px;
-    border: 4px solid rgb(59,183,126);
-    border-radius: 50%;
-    color: rgb(59,183,126);
-}
-
-.form-name-nickname {
     width: 100%;
-    padding: 20px;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    flex-wrap: nowrap;
+    background-color: white;
+    border-radius: 4px;
+
+}
+/* infor left */
+.infor-left {
+    width: 50%;
+    margin-right: 5px;
+}
+
+.infor-left aside {
     font-size: 1.6rem;
-
+    font-weight: 500;
+    padding: 15px;
+    color: rgba(0, 0, 0, 0.5);
 }
 
-.form-name {
+
+.feed-form {
+    display: flex;  
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .feed-form input {
+    height: 54px;
+    border-radius: 5px;
+    background: white;
+    margin-bottom: 15px;
+    border: none;
+    padding: 0 20px;
+    font-weight: 300;
+    font-size: 14px;
+    color: #4B4B4B;
+    outline: none;
+  }
+
+  
+  .button_put {
+    width: 100%;
+    height: 54px;
+    font-size: 14px;
+    color: white;
+    background: var(--primary-color);
+    border-radius: 5px;
+    border: none;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+  
+.user-date {
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
+    justify-content: center;
     align-items: center;
+    flex-direction: column;
+    padding: 30px;
 }
 
-.full-name-input {
-    padding: 10px;
-    width: 70%;
-    border-radius: 4px;
-    border: 1px solid rgba(0, 0, 0, 0.3);
-}
-.form-nick-name {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
-    align-items: center;
+.date {
+    font-size: 1.4rem;
 }
 
-.nick-name-input {
-    padding: 10px;
-    width: 70%;
-    border-radius: 4px;
-    border: 1px solid rgba(0, 0, 0, 0.3);
-}
 
-/* info right */
+/* infor right */
+.infor-right {
+    width: 50%;
+    border-left: 1px groove rgba(0, 0, 0, 0.1);
 
-.information-right {
-    width: 450px;
 }
 
 .info-list {
@@ -230,7 +192,7 @@
     justify-content: center;
     font-size: 1.6rem;
     padding: 15px;
-    color: rgba( 0, 0, 0, 0.7);
+    color: rgba(0, 0, 0, 0.7);
 }
 
 .list-item-right {
@@ -239,10 +201,10 @@
     font-size: 1.4rem;
 }
 
-.update{
+.update {
     text-decoration: none;
-    color: rgb(59,183,126);
-    border: solid 1px rgb(59,183,126)
+    color: rgb(59, 183, 126);
+    border: solid 1px rgb(59, 183, 126)
 }
 
 .phone-email {
@@ -278,7 +240,7 @@
     line-height: 2rem;
 }
 
-.email-address{
+.email-address {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -307,107 +269,351 @@
     padding: 20px;
 }
 
-.user-date {
+
+/* product */
+.menu {
+    width: 100%;
+    height: 4rem;
+    background-color: white;
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.list {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
     display: flex;
-    justify-content: left;
+    justify-content: space-between;
     align-items: center;
 }
 
-.date {
+.list-product {
     font-size: 1.6rem;
-    padding: 0 15px;
-    margin-right: 10px;
-}
-
-.days {
-    padding: 5px 12px;
-    border-radius: 4px;
-    margin-right: 10px;
-    border: 1px solid rgba( 0, 0, 0, 0.2);
+    color: var(--text-color);
+    padding: 10px 25px;
     cursor: pointer;
+}
+
+/* From uiverse.io by @satyamchaudharydev */
+/* removing default style of button */
+
+.form button {
+    border: none;
+    background: none;
+    color: #8b8ba7;
+  }
+  /* styling of whole input container */
+  .form {
+    --timing: 0.3s;
+    --width-of-input: 100%;
+    --height-of-input: 40px;
+    --border-height: 2px;
+    --input-bg: #fff;
+    --border-color: #2f2ee9;
+    --border-radius: 30px;
+    --after-border-radius: 1px;
+    position: relative;
+    width: var(--width-of-input);
+    height: var(--height-of-input);
+    display: flex;
+    align-items: center;
+    padding-inline: 0.8em;
+    border-radius: var(--border-radius);
+    transition: border-radius 0.5s ease;
+    background: var(--input-bg,#fff);
+  }
+  /* styling of Input */
+  .input {
+    font-size: 0.9rem;
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    padding-inline: 0.5em;
+    padding-block: 0.7em;
+    border: none;
+    font-size: 1.6rem;
+  }
+  /* styling of animated border */
+  .form:before {
+    content: "";
+    position: absolute;
+    background: var(--border-color);
+    transform: scaleX(0);
+    transform-origin: center;
+    width: 100%;
+    height: var(--border-height);
+    left: 0;
+    bottom: 0;
+    border-radius: 1px;
+    transition: transform var(--timing) ease;
+
+  }
+  /* Hover on Input */
+  .form:focus-within {
+    border-radius: var(--after-border-radius);
+  }
+  
+  input:focus {
+    outline: none;
+  }
+  /* here is code of animated border */
+  .form:focus-within:before {
+    transform: scale(1);
+  }
+  /* styling of close button */
+  /* == you can click the close button to remove text == */
+  .reset {
+    border: none;
+    background: none;
+    opacity: 0;
+    visibility: hidden;
+  }
+  /* close button shown when typing */
+  input:not(:placeholder-shown) ~ .reset {
+    opacity: 1;
+    visibility: visible;
+  }
+  /* sizing svg icons */
+  .form svg {
+    width: 17px;
+    margin-top: 3px;
 
 }
 
-.month {
-    padding: 5px 12px;
-    border-radius: 4px;
-    margin-right: 10px;
-    border: 1px solid rgba( 0, 0, 0, 0.2);
-    cursor: pointer;
-
-
-}
-
-.year {
-    padding: 5px 12px;
-    border-radius: 4px;
-    margin-right: 10px;
-    border: 1px solid rgba( 0, 0, 0, 0.2);
-    cursor: pointer;
-
-
-}
-
-
-
-/* THONG BAO CUA TOI */
-.notification {
+.section {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 400px;
+    margin-top: 20px;
+    background-color: white;
     display: none;
 }
-.notice{
+
+.container-section {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.container-section img {
+    object-fit: cover;
+    width: 20%;
+    height: 45%;
+    
+}
+
+.container-section p {
+    font-size: 2rem;
+    margin-top: 15px;
+}
+
+
+/* test */
+    .tabs-panes {
+        display: block;
+        width: 100%;
+    }
+  .tabs {
+    display: flex;
+    position: relative;
+  }
+  .tabs .line {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 4px;
+    border-radius: 15px;
+    background-color: #c23564;
+    transition: all 0.2s ease;
+  }
+  .tab-item {
+    min-width: 80px;
+    padding: 20px 39px;
+    font-size: 1.6rem;
+    text-align: center;
+    background-color: #fff;
+    opacity: 0.6;
+    cursor: pointer;
+    transition: all 0.5s ease;
+  }
+ 
+  .tab-item:hover {
+    opacity: 1;
+    background-color: rgba(194, 53, 100, 0.05);
+    border-color: rgba(194, 53, 100, 0.1);
+  }
+  .tab-item.active {
+    opacity: 1;
+  }
+  .tab-content {
+    margin-top: 30px;
+    position: relative;
+    width: 100%;
+    height: 400px;
+    
+  }
+
+  
+  .tab-pane {
+    color: #333;
+    display: none;
+    background-color: white;
+    position: absolute;
+}
+  .tab-pane.active {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 56px;
-    width: 80%;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    animation: 0.3s mymove ease-out ;
+  }
+
+  @keyframes mymove {
+    0%   {left: 100%;}
+
+    100% {left: 0;}
+  }
+
+  
+.tab-pane p {
+    font-size: 2rem;
+    margin-top: 15px;
 }
 
-.list-notice {
-    background-color: white;
-    width: 90%;
-    height: 70%;
-}
-
-.list-notice-item {
+.box-no-oder {
+    position: absolute; 
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1;
+}
+
+.box-no-oder img {
+    padding: 50px;
 }
 
 
-/* Quản lý đơn hàng  */
-.order {
-    display: none;
+.box-order {
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: white;
+    overflow: auto;
+    scroll-behavior: 1px;
 }
 
-/* <!-- Số địa chỉ --> */
-.address {
-    display: none;
-}
-/* <!--- Thông tin thành toán  --> */
-.billing {
-    display: none;
+.box-order::-webkit-scrollbar {
+    width: 6px;
+    background-color: #F5F5F5;
 }
 
-/* <!--- Đánh giá sản phẩm  --> */
-.viewed-products {
-    display: none;
+.shipping {
+    padding: 10px 0;
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    padding: 10px;
+    border-bottom: 20px solid rgb(245, 245, 250);
 }
 
-/* <!--- Sản phẩm đã xem --> */
-.viewed-products {
-    display: none;
+.shipping i {
+    color: var(--text-color);
+    font-size: 1.6rem;
+}
+.cart-car {
+    border-bottom: 1px solid rgba(194, 53, 100, 0.1);
+    padding: 10px;
 }
 
-/* <!--- Sản phẩm yêu thích  --> */
-.product-liked {
-    display: none;
+.cart-car > span {
+    color: var(--text-color);
+    font-size: 1.5rem;
 }
 
-/* <!--- Sản phẩm mua sau  --> */
-.buy-later {
-    display: none;
+.information-order {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
 }
-/* <!--- Đánh giá của tôi --> */
+.img-and-name {
+    display: flex;
+    gap: 20px;
+}
+.img-and-name img {
+    object-fit: contain;
+    width: 200px;
+    height: 100px;
+    overflow: hidden;
+}
 
-.my-review {
-    display: none;
+.img-and-name span {
+    font-size: 1.6rem;
+    padding-right: 100px;
+
+}
+
+.price {
+    font-size: 2rem;
+    padding-right: 10px;
+    display: flex;
+    height: 110px;
+}
+
+.count-btn {
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+    border-top: 1px solid rgba(194, 53, 100, 0.1);
+}   
+
+.color-count {
+    font-size: 1.6rem;
+    color: var(--text-color);
+    margin-right: 10px;
+    margin-bottom: 15px;
+    margin-top: 30px;
+
+}
+
+
+.two-btn > a > button{
+    padding: 15px 30px;
+    color: #277AFF;
+    background-color: transparent;
+    border: 1px solid #277AFF;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+
 }

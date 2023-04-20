@@ -1,13 +1,6 @@
-@media screen and (max-width : 1023px){
-    .col-7 {
-        display: none;
-    }
-
-    .col-5 {
-        width: 100%;
-    }
+@media screen and (min-width:1200px){
+   
 }
-
 
 @media screen and (max-width:1024px) and (min-width:46.185em){
    
@@ -267,5 +260,14 @@
     .accept-register {
        
         margin: 30px 0;
+    }
+}
+
+@media screen and (max-width:46.185em){
+   
+
+    .col-5 {
+        margin: 0;
+        width: 100%;
     }
 }
