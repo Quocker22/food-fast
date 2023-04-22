@@ -1,6 +1,11 @@
 //variable global
 const query = 'limit=100&page=1';
 
+
+function formatMoney(value = 0) {
+  return value.toLocaleString('vi', { currency: 'VND', style: 'currency' });
+}
+
 //api register
 function getDataFromInputRegister() {
   const fullName = document.querySelector(".register-name");
@@ -319,9 +324,9 @@ async function listCateFood() {
   const foods = await getListFood(limit);
   const getFoodList = document.querySelector(".navba-menu-list");  // lấy thẻ class chứa tát các thẻ
   await foods.data.map((food, index) => {  // chuyền food vào
-      const getNameList = document.createElement("div"); // tạo thẻ div
-      getNameList.className = "navba-menu"; // lấy thẻ cha các thẻ
-      getNameList.innerHTML = `
+    const getNameList = document.createElement("div"); // tạo thẻ div
+    getNameList.className = "navba-menu"; // lấy thẻ cha các thẻ
+    getNameList.innerHTML = `
       <a href="#" class="navba-list-menu">
       <div class="list-menu-img">
           <img src="${food.images[0].imageUrl}" alt="">  
@@ -362,7 +367,7 @@ async function addFoodToCart(event) {
     foodId: foodId,
     quantity: inputValue
   }
-  amountInput.value = 1 
+  amountInput.value = 1
   await useAddToCart(data);
   await getQuatityProduct()
 }
@@ -430,19 +435,19 @@ function checkCartProduct() {
 
 
   if (cartNotice.innerHTML === "0") {
-      list.style.display = "none";
-      noContent.style.display = "block";
+    list.style.display = "none";
+    noContent.style.display = "block";
   } else {
-      listShoppingCart();
-      list.style.display = "block";
-      noContent.style.display = "none";
+    listShoppingCart();
+    list.style.display = "block";
+    noContent.style.display = "none";
   }
 }
 
 async function listShoppingCart() {
   const shoppings = await getShoppingCart();
   const listShop = document.querySelector('tbody');
-  listShop.innerHTML='';
+  listShop.innerHTML = '';
   shoppings.data.items.map((food, index) => {
     const shopFood = document.createElement('tr');
     shopFood.innerHTML = `
@@ -566,7 +571,45 @@ async function listOrderMenu() {
     </div>
   </div>
       `
-      listOrderProduct.append(listProduct)
+    listOrderProduct.append(listProduct)
   });
 }
 listOrderMenu()
+
+async function defaultValueUserPay() {
+  const user = await getUser();
+  console.log(user.data);
+  const name_pay = document.querySelector('#name_pay');
+  name_pay.value = user.data.fullName;
+  const phone_pay = document.querySelector('#phone_pay');
+  phone_pay.value = user.data.phone;
+  const add_pay = document.querySelector('#add_pay');
+  add_pay.value = user.data.address;
+}
+
+async function listPayMenu() {
+  const shiping = await getShoppingCart();
+  const listOrderProduct = document.querySelector('.pay_food');
+  let total = 0;
+  listOrderProduct.innerHTML='';
+  shiping.data.items.map((food) => {
+    total += food.price * food.quantity
+    const listProduct = document.createElement('tr');
+    listProduct.innerHTML = `
+                        <td>
+                            <img src="${food.images[0].imageUrl}" alt="">
+                        </td>
+                        <td class="name-product">${food.foodName}</td>
+                        <td>${food.price}<sup>đ</sup></td>
+                        <td>${food.quantity}</td>
+                        <td>${food.price * food.quantity}<sup>đ</sup></td>
+      `
+    listOrderProduct.append(listProduct)
+  });
+  
+  const totalPay = document.querySelector('.total_pay');
+  totalPay.innerHTML= formatMoney(total);
+  const total_pay_ship = document.querySelector('.total_pay_ship');
+  const ship = 16000;
+  total_pay_ship.innerHTML= formatMoney(total + ship);
+}

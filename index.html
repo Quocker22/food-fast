@@ -84,19 +84,19 @@
             <form>
             <div class="name-form set-form">
                 <label for="name">Họ Tên: </label>
-                <input id="name" type="text" name="field1" placeholder="Họ và tên" />
+                <input id="name_pay" type="text" name="field1" placeholder="Họ và tên"/>
             </div>
             <div class="phone-form set-form">
                 <label for="phone set-form">Số điện thoai: </label>
-                <input id="phone" type="text" name="field1" placeholder="Số điện thoại" />
+                <input id="phone_pay" type="text" name="field1" placeholder="Số điện thoại" />
             </div>
             <div class="add-form set-form">
                 <label for="add">Địa chỉ: </label>
-                <input id="add" type="text" name="field1" placeholder="Địa chỉ " />
+                <input id="add_pay" type="text" name="field1" placeholder="Địa chỉ " />
             </div>
             <div class="note-form set-form">
                 <label for="note">Ghi chú: </label>
-                <textarea id="note" name="field3" placeholder="Ghi Chú"></textarea>
+                <textarea cols="50" id="note" name="field3" placeholder="Ghi Chú"></textarea>
             </div>
             
             </form>
@@ -110,15 +110,8 @@
                     <th>Số Lượng</th>
                     <th>Thành Tiền</th>
                 </tr>
-                <tr>
-                    <td>
-                        <img src="./access/header/img/breakfast-1.jpg" alt="">
-                    </td>
-                    <td class="name-product">Phở bò</td>
-                    <td>20.000 <sup>đ</sup></td>
-                    <td>2</td>
-                    <td>40.000 <sup>đ</sup></td>
-                </tr>
+                <tbody class="pay_food"></tbody>
+                
             </table>
         </div>
         <div class="sum-money">
@@ -128,11 +121,11 @@
             </div>
             <div class="product-money money">
                 <p>Tiền Sản Phẩm </p>
-                <p>20.000 <sup>đ</sup></p>
+                <p class="total_pay"></p>
             </div>
             <div class="all-money money">
                 <h2>Tổng Tiền</h2>
-                <h1>36.000 <sup>đ</sup></h1>
+                <h1 class="total_pay_ship"></h1>
             </div>
         </div>
             <div class="two-button" style="display: flex;justify-content: center;">
@@ -411,6 +404,8 @@
     <script>
         const dialog = document.querySelector("#dialog");
         function showDialog() {
+            listPayMenu();
+            defaultValueUserPay();
         dialog.showModal();
         }
         function closeDiaLog() {
