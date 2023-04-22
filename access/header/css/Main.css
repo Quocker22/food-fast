@@ -1301,8 +1301,10 @@ i.icon-like-fill {
 
 /*tue lam*/
 
+/*
 /*icon*/
-#dialog .icon {
+/*
+ #dialog .icon {
     margin: 40px auto 0;
     font-size: larger;
     width: 93px;
@@ -1312,34 +1314,109 @@ i.icon-like-fill {
     border-radius: 50%;
     text-align: center;
     /* display: inline-block;
-     */
-    /* list-style: 50px; */
-}
 
-#dialog .icon i {
+    /* list-style: 50px; */
+/*dialog .icon i {
     color: #a5dc86;
     font-size: 50px;
     line-height: 93px;
+} */
+#dialog .icon {
+   position: relative;
+    align-items: center;
+    font-size: 25px;
+    width: 100%;
+    height: 30px;
+}
+#dialog .icon  i {
+    position: absolute;
+    color: red;
+    opacity: 0.5;
+    right: 10px;
+    top: 5px;
+}
+#dialog .icon  i:hover {
+    cursor: pointer;
+    opacity: 1;
 }
 
-/*dialog*/
-#Continue_shopping {
-    color: white;
-    background-color: rgb(59, 183, 126);
-    border: 0;
-    border-radius: 5px;
-    height: 48px;
-    width: 225px;
-    font-size: 20px;
-    margin-left: 10px;
-    margin-right: 10px;
+/* form */
+
+#dialog .info{
+    width: 70%;
+    margin: auto;
+    text-align: left;
+}
+#dialog .border-dialog {
+    height: 3px;
+    width: 100%;
+    background-position-x: -30px;
+    background-size: 116px 3px;
+    background-image: repeating-linear-gradient(45deg,#6fa6d6,#6fa6d6 33px,transparent 0,transparent 41px,#f18d9b 0,#f18d9b 74px,transparent 0,transparent 82px);
+}
+#dialog .info label {
+    font-size:23px ;
+
+}
+#dialog .info input {
+    width: 70%;
+    height: 40px;
+    padding-left: 20px;
+}
+#dialog .info textarea {
+    width: 70%;
+    height: 100px;
+    padding: 10px 20px;
+}
+#dialog .info .set-form {
+    display: flex;
+    justify-content: space-between;
     margin-bottom: 20px;
 }
 
-#Continue_shopping:hover {
-    cursor: pointer;
-    background-color: rgb(53, 164, 113);
+/* invoice */
+#dialog  .invoice {
+    width: 70%;
+    margin:10px auto;
+    font-size: 16px;
 }
+#dialog  .invoice th,
+#dialog  .invoice td {
+    width: 200px    ;
+    text-align: center;
+}
+#dialog  .invoice td > img {
+    width: 50px;
+}
+#dialog  .invoice td > span {
+    display: flex;
+}
+#dialog  .invoice .name-product {
+    text-align: left;
+}
+#dialog .sum-money {
+    width: 70%;
+    margin: 10px auto;
+    text-align: right;
+}
+#dialog .sum-money .ship-money p,
+#dialog .sum-money .product-money p {
+    display: inline;
+    font-size: 20px;
+}
+#dialog .sum-money .product-money h2 {
+    margin-right: 20px;
+}
+#dialog .sum-money .money {
+    display: flex;
+    justify-content: space-between;
+}
+#dialog .sum-money .all-money h2{
+    font-size: 20px;
+}
+
+
+
 
 
 #checkout {
@@ -1354,25 +1431,19 @@ i.icon-like-fill {
     width: 152px;
     height: 48px;
 }
-
 #checkout:hover {
     cursor: pointer;
     background-color: rgb(229, 167, 60);
 }
 
 #added_to_cart {
-    color: #595959;
+    color:  var(--primary-color);
     font-size: 31px;
-    margin-top: 28px;
+    margin: 5px 0;
     text-align: center;
     width: 100%;
 }
 
-.open-dialog {
-    position: fixed;
-    top: 100px;
-    left: 100px;
-}
 
 #dialog::backdrop {
     background-color: rgba(0, 0, 0, 0.4);
@@ -1384,9 +1455,11 @@ i.icon-like-fill {
 }
 
 #dialog {
-    width: 530px;
+    width: 900px;
     border-radius: 5px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin: auto;
+    z-index: 998;
     border: 0;
 }
 

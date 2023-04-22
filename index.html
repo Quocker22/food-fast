@@ -27,6 +27,8 @@
     <!--toast message-->
     <div id="toast">
     </div>
+
+
     <!--cartlist-->
     <div class="cart">
         <i class="fa-solid fa-xmark" style="font-size: 30px;cursor: pointer;" onclick="document.querySelector('.cart').style.right = '-100%'"></i>
@@ -50,16 +52,16 @@
         <div class="price-total">
             <p style="text-align: right;font-weight:bold;">Subtatal:<span>0</span><sup>đ</sup> </p>
         </div>
-        <button>Checkout
-
-            </button>
+        <button onclick="showDialog()" class="js-checkout">Checkout
+        </button>
         </div>
+
 
     </div>
 
     <!--dialog-->
 
-    <dialog id="dialog">
+    <!-- <dialog id="dialog">
         <div class="icon">
             <i class="fa-solid fa-check"></i>
         </div>
@@ -69,8 +71,78 @@
                 <button id = "Continue_shopping" onclick = "closeDiaLog()" >Continue shopping</button>
                 <button id="checkout" onclick="{document.querySelector('.cart').style.right = '0%';closeDiaLog()}">Checkout</button>
             </div>
-        <!-- <div class="result"></div> -->
+         <div class="result"></div>
+    </dialog> -->
+
+    <dialog id="dialog">
+        <div class="border-dialog"></div>
+        <div class="icon">
+            <i  onclick = "closeDiaLog()" class="fa-solid fa-xmark"></i>
+        </div>
+        <h1 id="added_to_cart">Thanh Toán!</h1>
+        <div class="info">
+            <form>
+            <div class="name-form set-form">
+                <label for="name">Họ Tên: </label>
+                <input id="name" type="text" name="field1" placeholder="Họ và tên" />
+            </div>
+            <div class="phone-form set-form">
+                <label for="phone set-form">Số điện thoai: </label>
+                <input id="phone" type="text" name="field1" placeholder="Số điện thoại" />
+            </div>
+            <div class="add-form set-form">
+                <label for="add">Địa chỉ: </label>
+                <input id="add" type="text" name="field1" placeholder="Địa chỉ " />
+            </div>
+            <div class="note-form set-form">
+                <label for="note">Ghi chú: </label>
+                <textarea id="note" name="field3" placeholder="Ghi Chú"></textarea>
+            </div>
+            
+            </form>
+        </div>
+        <div class="invoice">
+            <table>
+                <tr>
+                    <th>Sản Phẩm</th>
+                    <th></th>
+                    <th>Đơn Giá</th>
+                    <th>Số Lượng</th>
+                    <th>Thành Tiền</th>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="./access/header/img/breakfast-1.jpg" alt="">
+                    </td>
+                    <td class="name-product">Phở bò</td>
+                    <td>20.000 <sup>đ</sup></td>
+                    <td>2</td>
+                    <td>40.000 <sup>đ</sup></td>
+                </tr>
+            </table>
+        </div>
+        <div class="sum-money">
+            <div class="ship-money money">
+                <p>Phí Ship:  </p>
+                <p>16.000 <sup>đ</sup></p>
+            </div>
+            <div class="product-money money">
+                <p>Tiền Sản Phẩm </p>
+                <p>20.000 <sup>đ</sup></p>
+            </div>
+            <div class="all-money money">
+                <h2>Tổng Tiền</h2>
+                <h1>36.000 <sup>đ</sup></h1>
+            </div>
+        </div>
+            <div class="two-button" style="display: flex;justify-content: center;">
+
+                <button id="checkout" >Thanh Toán</button>
+            </div>
+         <div class="result"></div>
     </dialog>
+
+
 
 
     <!-- box-body -->
@@ -203,8 +275,8 @@
                                         <button class="plus-btn" onclick="handlePlus()"><i
                                                 class="fa-solid fa-plus"></i></button>
                                     </div>
-                                    <div class="link-cart">
-                                        <a>ADD TO CART
+                                    <div class="link-cart" >
+                                        <a >ADD TO CART
                                             <i class="fa-sharp fa-solid fa-right-long"></i>
                                         </a>
                                     </div>
@@ -336,6 +408,15 @@
               });
         </script>
     </div>
+    <script>
+        const dialog = document.querySelector("#dialog");
+        function showDialog() {
+        dialog.showModal();
+        }
+        function closeDiaLog() {
+            dialog.close(); 
+        }
+    </script>
     <script src="./api/index.js"></script>
     <script src="./access/header/css/main.js"></script>
     <script src="./toastMessage.js"></script>
