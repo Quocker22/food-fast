@@ -130,11 +130,20 @@
         </div>
             <div class="two-button" style="display: flex;justify-content: center;">
 
-                <button id="checkout" >Thanh Toán</button>
+                <button  onclick="done(),closeDiaLog()" id="checkout" >Thanh Toán</button>
             </div>
          <div class="result"></div>
     </dialog>
 
+    <dialog id="buy-success">
+        <div class="icon">
+            <i onclick="closeBuyDiaLog()"  class="fa-solid fa-xmark"></i>
+        </div>
+        <div class="notice">
+            <h1>Bạn đã đặt hàng thành công !</h1>
+            <p>Chân thành cảm ơn quý khách</p>
+        </div>
+    </dialog>
 
 
 
@@ -410,6 +419,13 @@
         }
         function closeDiaLog() {
             dialog.close(); 
+        }
+        const buySuccess = document.querySelector("#buy-success");
+        function done() {
+            buySuccess.showModal();
+        }
+        function closeBuyDiaLog() {
+            buySuccess.close(); 
         }
     </script>
     <script src="./api/index.js"></script>

@@ -1321,6 +1321,7 @@ i.icon-like-fill {
     font-size: 50px;
     line-height: 93px;
 } */
+dialog#buy-success .icon,
 #dialog .icon {
    position: relative;
     align-items: center;
@@ -1328,6 +1329,7 @@ i.icon-like-fill {
     width: 100%;
     height: 30px;
 }
+dialog#buy-success .icon i,
 #dialog .icon  i {
     position: absolute;
     color: red;
@@ -1335,6 +1337,7 @@ i.icon-like-fill {
     right: 10px;
     top: 5px;
 }
+dialog#buy-success .icon i:hover,
 #dialog .icon  i:hover {
     cursor: pointer;
     opacity: 1;
@@ -1444,15 +1447,16 @@ i.icon-like-fill {
     width: 100%;
 }
 
-
+dialog#buy-success::backdrop,
 #dialog::backdrop {
     background-color: rgba(0, 0, 0, 0.4);
 
 }
-
+dialog#buy-success::backdrop:checked dialog#buy-success,
 #dialog::backdrop:checked #dialog {
     display: none;
 }
+
 
 #dialog {
     width: 900px;
@@ -1462,8 +1466,23 @@ i.icon-like-fill {
     z-index: 998;
     border: 0;
 }
+dialog#buy-success {
+    width: 40rem;
+    margin: auto;
+    text-align: right;
+    height: 110px;
+    border: none;
+    border-radius: 10px;
+}
+dialog#buy-success .notice {
+    text-align: center;
+    color: var(--primary-color);
 
-
+}
+dialog#buy-success .notice p {
+    color: #959292;
+    font-size: 14px;
+}
 dialog[open] {
     animation: myFadeIn .5s ease;
 }
